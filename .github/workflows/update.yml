@@ -49,5 +49,7 @@ jobs:
                   outputs/wc26_team_snapshots.csv \
                   data/processed/fotmob_xg.csv
           git commit -m "Actualización automática $(date -u +%F_%H:%M)" || echo "sin cambios que publicar"
-          git pull --rebase origin main
+          # autostash: el workspace queda sucio (datos regenerados que no
+          # publicamos); se aparta solo durante el rebase
+          git pull --rebase --autostash origin main
           git push
