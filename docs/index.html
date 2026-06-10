@@ -330,6 +330,19 @@
     th { font-size: 9.5px; }
     td { padding: 5px 4px; }
   }
+
+  /* ---------- pop-up de bienvenida ---------- */
+  .intro-card { max-width: 480px; text-align: left; }
+  .intro-p { font-size: 13.5px; line-height: 1.6; color: var(--text);
+             margin-bottom: 12px; }
+  .intro-p.dim { color: var(--dim); font-size: 12.5px; }
+  .intro-gold { color: var(--accent); font-weight: 700; }
+  .intro-btn { display: block; width: 100%; padding: 12px; border: 0;
+               border-radius: 12px; cursor: pointer; font-weight: 800;
+               font-size: 14px; color: #fff; font-family: inherit;
+               background: linear-gradient(90deg, var(--blue26), var(--blue));
+               margin-top: 6px; }
+  .intro-btn:hover { filter: brightness(1.1); }
 </style>
 </head>
 <body>
@@ -402,6 +415,24 @@
   </div>
 </section>
 </main>
+
+<div id="intro" class="modal hidden">
+  <div class="modal-card intro-card">
+    <div class="mp-head">🏆<div><h2>Predicciones en vivo</h2></div></div>
+    <p class="intro-p">Estas predicciones <strong>se recalculan automáticamente
+    cada día</strong> durante el Mundial: el modelo incorpora los resultados
+    reales de cada jornada, reentrena y vuelve a simular 10.000 veces lo que
+    queda de torneo.</p>
+    <p class="intro-p">Por eso <strong>las probabilidades cambian</strong> —
+    una goleada, una sorpresa o una lesión clave mueven el cuadro. Los partidos
+    ya jugados aparecen con su resultado real en <span class="intro-gold">ámbar</span>,
+    y en la pestaña <strong>Tendencias</strong> puedes seguir la evolución diaria
+    y comprobar cuánto acierta el modelo.</p>
+    <p class="intro-p dim">Pulsa sobre cualquier selección para ver su ficha
+    completa.</p>
+    <button class="intro-btn" onclick="document.getElementById('intro').classList.add('hidden')">¡Entendido, al lío!</button>
+  </div>
+</div>
 
 <div id="modal" class="modal hidden">
   <div class="modal-card">
@@ -619,6 +650,7 @@ setTimeout(drawConnectors, 50);
     if (i % step !== 0 && i !== dates.length - 1) return;
     g += `<text x="${X(i)}" y="${H - 10}" text-anchor="middle" font-size="11" fill="#5e6b87">${d}</text>`;
   });
+  const endLabels = [];
   teams.forEach((t, k) => {
     const pts = series[t].map((v, i) => `${X(i)},${Y(v)}`).join(" ");
     g += `<polyline points="${pts}" fill="none" stroke="${PAL[k]}" stroke-width="2.5" stroke-linejoin="round"/>`;
@@ -626,7 +658,17 @@ setTimeout(drawConnectors, 50);
       g += `<circle cx="${X(i)}" cy="${Y(v)}" r="3.4" fill="${PAL[k]}"/>`;
     });
     const last = series[t].at(-1);
-    g += `<text x="${W - PR + 8}" y="${Y(last) + 4}" font-size="11.5" font-weight="700" fill="${PAL[k]}">${N(t)} ${last}%</text>`;
+    endLabels.push({ y: Y(last) + 3, text: `${N(t)} ${last}%`, color: PAL[k] });
+  });
+  // anti-solapamiento: empuja hacia abajo las etiquetas a menos de 12px
+  endLabels.sort((a, b) => a.y - b.y);
+  for (let i = 1; i < endLabels.length; i++) {
+    if (endLabels[i].y - endLabels[i - 1].y < 12) {
+      endLabels[i].y = endLabels[i - 1].y + 12;
+    }
+  }
+  endLabels.forEach(l => {
+    g += `<text x="${W - PR + 8}" y="${l.y}" font-size="9.5" font-weight="700" fill="${l.color}">${l.text}</text>`;
   });
   document.getElementById("trends-chart").innerHTML =
     `<svg viewBox="0 0 ${W} ${H}">${g}</svg>`;
@@ -677,6 +719,18 @@ document.addEventListener("click", e => {
 document.addEventListener("keydown", e => {
   if (e.key === "Escape") document.getElementById("modal").classList.add("hidden");
 });
+
+/* ---------- pop-up informativo (una vez al día por visitante) ---------- */
+{
+  const k = "introVisto";
+  if (localStorage.getItem(k) !== DATA.generated) {
+    document.getElementById("intro").classList.remove("hidden");
+    localStorage.setItem(k, DATA.generated);
+  }
+  document.getElementById("intro").addEventListener("click", e => {
+    if (e.target.id === "intro") e.target.classList.add("hidden");
+  });
+}
 </script>
 </body>
 </html>
