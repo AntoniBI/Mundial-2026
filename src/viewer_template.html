@@ -288,8 +288,22 @@
   .mp-head .grp { color: var(--dim); font-size: 12px; font-weight: 600; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
   .chip { background: var(--card2); border-radius: 999px; padding: 5px 12px;
-          font-size: 12px; font-weight: 600; color: var(--text); }
+          font-size: 12px; font-weight: 600; color: var(--text);
+          position: relative; }
   .chip b { color: var(--navy); }
+  .info-btn { display: inline-flex; align-items: center; justify-content: center;
+              width: 14px; height: 14px; border-radius: 50%; padding: 0;
+              border: 1px solid var(--lightblue); background: none;
+              color: var(--lightblue); font: 800 9px/1 inherit;
+              margin-left: 4px; vertical-align: 1px; cursor: help; }
+  .info-btn .tip { position: absolute; top: calc(100% + 7px); left: 0;
+                   width: 240px; background: var(--navy); color: #fff;
+                   font-size: 11px; font-weight: 500; line-height: 1.45;
+                   padding: 9px 11px; border-radius: 8px; text-align: left;
+                   opacity: 0; pointer-events: none; transition: opacity .15s;
+                   z-index: 30; box-shadow: 0 4px 14px rgba(20,33,61,.3); }
+  .info-btn .tip b { color: #fff; }
+  .info-btn:hover .tip, .info-btn:focus .tip { opacity: 1; }
   .mp-sec { font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
             text-transform: uppercase; color: var(--lightblue); margin: 14px 0 8px; }
   .mp-bar { display: grid; grid-template-columns: 86px 1fr 52px; gap: 8px;
@@ -703,7 +717,7 @@ function openProfile(team) {
     <div class="mp-head">${flag(team)}<div><h2>${N(team)}</h2>
       <div class="grp">Grupo ${p.group}</div></div></div>
     <div class="chips">
-      <span class="chip" title="Rating Elo: ${p.elo}">Fuerza mundial <b>#${p.rank}</b></span>
+      <span class="chip">Fuerza mundial <b>#${p.rank}</b><button type="button" class="info-btn" aria-label="Cómo se calcula la fuerza mundial">?<span class="tip">Posición en un ranking Elo propio de ~240 selecciones, recalculado a diario con todo el histórico de partidos: cada resultado suma o resta puntos según la fuerza del rival, la importancia del torneo (un Mundial mueve hasta 3× más que un amistoso) y jugar en casa. Rating Elo actual: <b>${p.elo}</b>.</span></button></span>
       <span class="chip" title="Goles esperados a favor / en contra por partido (forma reciente)">Ataque <b>${p.xgf}</b> · Defensa <b>${p.xga}</b></span>
       <span class="chip">Victorias <b>${p.win}%</b></span>
       ${p.mv ? `<span class="chip">Plantilla <b>${p.mv} M€</b></span>` : ""}
