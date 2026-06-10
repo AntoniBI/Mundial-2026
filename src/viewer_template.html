@@ -6,6 +6,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="__FAVICON_URI__">
+<link rel="apple-touch-icon" href="__FAVICON_URI__">
+<meta name="theme-color" content="#ffffff">
 <title>Copa Mundial de la FIFA 26™ — Simulación Monte Carlo</title>
 <style>
   /* Tema claro moderno. Identidad FIFA: franja tricolor, azules de
@@ -299,6 +301,35 @@
             padding: 3px 0; }
   .mp-riv .rn { font-weight: 600; flex: 1; }
   .mp-riv .rp { color: var(--dim); font-variant-numeric: tabular-nums; }
+
+  /* ---------- optimización móvil ---------- */
+  html { -webkit-text-size-adjust: 100%; }
+  .swipe-hint { display: none; }
+  #trends-chart { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  #trends-chart svg { min-width: 720px; width: 100%; }
+  .mp-riv { flex-wrap: wrap; }
+  @media (max-width: 760px) {
+    .hero .how { font-size: 11.5px; line-height: 1.5; }
+    .hero .byline { font-size: 12.5px; }
+    .swipe-hint { display: block; color: var(--lightblue); font-size: 11.5px;
+                  font-weight: 700; margin-bottom: 8px; text-align: center;
+                  letter-spacing: .5px; }
+    .bracket { min-width: 1280px; gap: 8px; }
+    .match { font-size: 11px; padding: 7px 8px; }
+    .ts-card { min-width: 252px; padding: 8px 11px; }
+    /* ficha de selección como hoja inferior (estilo app) */
+    .modal { padding: 0; align-items: flex-end; }
+    .modal-card { max-width: 100%; max-height: 90vh; border-radius: 20px 20px 0 0;
+                  padding: 20px 16px; animation: sheetUp .25s ease; }
+    @keyframes sheetUp { from { transform: translateY(40px); opacity: .4; }
+                         to { transform: none; opacity: 1; } }
+    .modal-close { width: 42px; height: 42px; font-size: 24px; }
+    .mp-bar { grid-template-columns: 74px 1fr 48px; font-size: 12px; }
+    .stages-card { padding: 12px; }
+    .sb-card .v { font-size: 20px; }
+    th { font-size: 9.5px; }
+    td { padding: 5px 4px; }
+  }
 </style>
 </head>
 <body>
@@ -349,6 +380,7 @@
   decidiría en prórroga o penaltis). Ojo: en cruces igualados ningún marcador
   supera el ~13%, y el 1-1 suele ser el más probable por poco.
   Las mitades izquierda y derecha convergen en la final.</p>
+  <div class="swipe-hint">⟷ Desliza para recorrer el cuadro completo</div>
   <div class="bracket-wrap"><div class="bracket" id="bracket-grid"></div></div>
   <div class="champ" id="champ"></div>
 </section>
@@ -383,7 +415,7 @@ const DATA = /*__DATA__*/null;
 
 const flag = (t, cls = "flag") => {
   const c = DATA.flags[t];
-  return c ? `<img class="${cls}" src="https://flagcdn.com/w40/${c}.png" alt="">` : "";
+  return c ? `<img class="${cls}" loading="lazy" decoding="async" src="https://flagcdn.com/w40/${c}.png" alt="">` : "";
 };
 const N = t => DATA.names[t] || t;  // nombre en español para la UI
 
