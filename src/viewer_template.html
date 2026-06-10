@@ -471,7 +471,8 @@ const matchCard = (key, i, extra = "") => {
   const m = DATA.ko[key][i];
   const fav1 = m.w1 >= m.w2;
   const lbl = key === "R32" ? `M${i + 1} · ${DATA.ko_labels[i]}`
-            : key === "Final" ? "FINAL" : `${key} ${i + 1}`;
+            : key === "Final" ? "FINAL"
+            : key === "Third" ? "3ER PUESTO" : `${key} ${i + 1}`;
   return `<div class="match ${extra}" id="m-${key}-${i}">
     <div class="lbl"><span>${lbl}</span><span class="kscore">${m.score || ""}${m.score_pct ? ` <em>·${m.score_pct}%</em>` : ""}</span><span>${m.pair_pct}%</span></div>
     <div class="mrow ${fav1 ? "fav" : ""}">${flag(m.t1, "flag sm")}<span class="name">${N(m.t1)}</span><span class="pct">${m.w1}%</span></div>
@@ -489,7 +490,9 @@ document.getElementById("bracket-grid").innerHTML =
   col("Octavos", "R16", LEFT.R16) +
   col("Cuartos", "QF", LEFT.QF) +
   col("Semifinal", "SF", LEFT.SF) +
-  col("🏆 Final", "Final", [0], "final") +
+  `<div class="bcol"><h3>🏆 Final</h3><div class="stack">` +
+    matchCard("Final", 0, "final") +
+    (DATA.ko.Third ? matchCard("Third", 0) : "") + `</div></div>` +
   col("Semifinal", "SF", RIGHT.SF) +
   col("Cuartos", "QF", RIGHT.QF) +
   col("Octavos", "R16", RIGHT.R16) +
@@ -505,9 +508,9 @@ document.getElementById("champ").innerHTML =
 
 /* ---------- camino al título ---------- */
 const tbl = document.getElementById("stages-table");
-const stages = ["R32", "R16", "QF", "SF", "Final", "Champion"];
+const stages = ["R32", "R16", "QF", "SF", "Final", "Third", "Champion"];
 const names = { R32: "R32", R16: "Octavos", QF: "Cuartos", SF: "Semis",
-                Final: "Final", Champion: "🏆 Campeón" };
+                Final: "Final", Third: "🥉 3º", Champion: "🏆 Campeón" };
 tbl.innerHTML = `<tr><th>Selección</th>${stages.map(s => `<th>${names[s]}</th>`).join("")}</tr>` +
   DATA.stages.map(r => `<tr><td><div class="team" data-team="${r.team}">${flag(r.team)}${N(r.team)}</div></td>${stages.map(s =>
     `<td><span class="h" style="width:${Math.max(2, r[s] * 0.6)}px"></span>${r[s].toFixed(1)}%</td>`
@@ -629,13 +632,13 @@ setTimeout(drawConnectors, 50);
 
 /* ---------- ficha de selección ---------- */
 const RND_NAMES = { R32: "Dieciseisavos", R16: "Octavos", QF: "Cuartos",
-                    SF: "Semifinal", Final: "Final" };
+                    SF: "Semifinal", Final: "Final", Third: "3er puesto" };
 function openProfile(team) {
   const p = DATA.profiles[team];
   if (!p) return;
-  const stages = ["R32", "R16", "QF", "SF", "Final", "Champion"];
+  const stages = ["R32", "R16", "QF", "SF", "Final", "Third", "Champion"];
   const sn = { R32: "R32", R16: "Octavos", QF: "Cuartos", SF: "Semis",
-               Final: "Final", Champion: "🏆 Campeón" };
+               Final: "Final", Third: "🥉 3º", Champion: "🏆 Campeón" };
   const bars = stages.map(st => `
     <div class="mp-bar"><span>${sn[st]}</span>
       <div class="tr"><div style="width:${p.stages[st]}%"></div></div>

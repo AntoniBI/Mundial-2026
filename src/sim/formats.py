@@ -24,7 +24,7 @@ WC22_GROUPS = {
 }
 
 STAGES_32 = ["R16", "QF", "SF", "Final", "Champion"]
-STAGES_48 = ["R32", "R16", "QF", "SF", "Final", "Champion"]
+STAGES_48 = ["R32", "R16", "QF", "SF", "Final", "Third", "Champion"]
 
 
 def simulate_wc22(lam_tab, n_sims: int, seed: int = 42, pen_tab=None, rho=0.0) -> pd.DataFrame:
@@ -116,7 +116,7 @@ def simulate_wc26(lam_tab, groups: dict[str, list[str]], n_sims: int,
         collect["group_pts"] = {g: {t: 0.0 for t in ts} for g, ts in groups.items()}
         collect["ko"] = {rnd: [defaultdict(int) for _ in range(n)]
                          for rnd, n in (("R32", 16), ("R16", 8), ("QF", 4),
-                                        ("SF", 2), ("Final", 1))}
+                                        ("SF", 2), ("Final", 1), ("Third", 1))}
         collect["n_sims"] = n_sims
 
     def record_ko(rnd, fixtures, winners):
@@ -195,6 +195,11 @@ def simulate_wc26(lam_tab, groups: dict[str, list[str]], n_sims: int,
         champ = ko(wsf[0], wsf[1], lam_late)
         record_ko("Final", [(wsf[0], wsf[1])], [champ])
         counts[champ]["Champion"] += 1
+        # partido por el 3er y 4o puesto (perdedores de semifinales)
+        losers_sf = [t for (a, b), w in zip(sf, wsf) for t in (a, b) if t != w]
+        third = ko(losers_sf[0], losers_sf[1], lam_late)
+        record_ko("Third", [(losers_sf[0], losers_sf[1])], [third])
+        counts[third]["Third"] += 1
 
     return _to_table(counts, STAGES_48, n_sims)
 

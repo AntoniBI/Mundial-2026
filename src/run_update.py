@@ -59,7 +59,12 @@ def load_tournament_state(groups: dict[str, list[str]]):
                 m = shoot[(shoot["date"] == r["date"])
                           & (shoot["home_team"] == t1) & (shoot["away_team"] == t2)]
                 if m.empty:
-                    raise ValueError(f"Empate sin penaltis registrados: {t1}-{t2} {r['date']:%Y-%m-%d}")
+                    # shootouts.csv puede actualizarse con retraso respecto a
+                    # results.csv: no bloqueamos la actualización diaria, ese
+                    # cruce se simula hasta que llegue el dato real
+                    print(f"AVISO: empate {t1}-{t2} ({r['date']:%Y-%m-%d}) sin "
+                          f"penaltis registrados aún; el cruce se simulará")
+                    continue
                 winner = m.iloc[0]["winner"]
             ko_winners[frozenset((t1, t2))] = winner
     return played_group, ko_winners

@@ -195,7 +195,7 @@ def coherent_groups(collect, groups) -> tuple[dict, list]:
     return order, r32
 
 
-LATE_ROUNDS = {"QF", "SF", "Final"}  # sedes solo de EE.UU.
+LATE_ROUNDS = {"QF", "SF", "Final", "Third"}  # sedes solo de EE.UU.
 QF_FROM = "2026-07-09"               # de cuartos en adelante -> tabla "late"
 
 
@@ -217,9 +217,23 @@ def today_matches(lam_tab, lam_late, groups, rho, today: str) -> list[dict]:
         l1, l2 = lam[(t1, t2)], lam[(t2, t1)]
         p = outcome_probs(np.array([l1]), np.array([l2]), rho=rho)[0]
         played = pd.notna(r["home_score"])
+        if same_group:
+            label = f"Grupo {group_of[t1]}"
+        elif today <= "2026-07-03":
+            label = "Dieciseisavos"
+        elif today <= "2026-07-08":
+            label = "Octavos"
+        elif today <= "2026-07-12":
+            label = "Cuartos de final"
+        elif today <= "2026-07-16":
+            label = "Semifinal"
+        elif today <= "2026-07-18":
+            label = "3er puesto"
+        else:
+            label = "FINAL"
         out.append({
             "t1": t1, "t2": t2,
-            "label": f"Grupo {group_of[t1]}" if same_group else "Eliminatoria",
+            "label": label,
             "city": r["city"],
             "p1": round(100 * p[0], 1), "px": round(100 * p[1], 1),
             "p2": round(100 * p[2], 1),
@@ -368,6 +382,15 @@ def ko_payload(collect, lam_tab, lam_late, r32_pairs, pen_tab=None, rho=0.0) -> 
         for i, counter in enumerate(slots):
             if rnd == "R32":
                 t1, t2 = r32_pairs[i]
+                freq = sum(c for (x, y, _), c in counter.items()
+                           if {x, y} == {t1, t2})
+            elif rnd == "Third":
+                # perdedores de las semifinales marcadas
+                sf_rows = out["SF"]
+                t1 = (sf_rows[0]["t2"] if picked[("SF", 0)] == sf_rows[0]["t1"]
+                      else sf_rows[0]["t1"])
+                t2 = (sf_rows[1]["t2"] if picked[("SF", 1)] == sf_rows[1]["t1"]
+                      else sf_rows[1]["t1"])
                 freq = sum(c for (x, y, _), c in counter.items()
                            if {x, y} == {t1, t2})
             else:
