@@ -1,0 +1,936 @@
+date,home_fm,away_fm,xg_home,xg_away,score,team_home,team_away,match_id
+2021-03-24,Portugal,Azerbaijan,2.07,0.19,1 - 0,Portugal,Azerbaijan,3495148
+2021-03-24,Serbia,Ireland,1.41,0.68,3 - 2,Serbia,Republic of Ireland,3495149
+2021-03-24,Finland,Bosnia and Herzegovina,2.25,2.86,2 - 2,Finland,Bosnia and Herzegovina,3495208
+2021-03-24,France,Ukraine,1.71,0.16,1 - 1,France,Ukraine,3495209
+2021-03-24,Belgium,Wales,2.24,0.79,3 - 1,Belgium,Wales,3495228
+2021-03-24,Estonia,Czechia,0.77,2.86,2 - 6,Estonia,Czech Republic,3495229
+2021-03-24,Turkiye,Netherlands,1.15,2.6,4 - 2,Turkey,Netherlands,3495286
+2021-03-24,Gibraltar,Norway,0.06,3.84,0 - 3,Gibraltar,Norway,3495284
+2021-03-24,Slovenia,Croatia,0.55,0.6,1 - 0,Slovenia,Croatia,3495316
+2021-03-25,Spain,Greece,0.98,0.79,1 - 1,Spain,Greece,3495168
+2021-03-25,Sweden,Georgia,0.98,1.05,1 - 0,Sweden,Georgia,3495169
+2021-03-25,Bulgaria,Switzerland,0.36,2.98,1 - 3,Bulgaria,Switzerland,3495188
+2021-03-25,Israel,Denmark,0.65,1.27,0 - 2,Israel,Denmark,3495251
+2021-03-25,Scotland,Austria,0.95,0.9,2 - 2,Scotland,Austria,3495253
+2021-03-25,England,San Marino,4.96,0.06,5 - 0,England,San Marino,3495345
+2021-03-25,Hungary,Poland,3.08,0.92,3 - 3,Hungary,Poland,3495346
+2021-03-25,Germany,Iceland,0.94,0.57,3 - 0,Germany,Iceland,3495374
+2021-03-27,Serbia,Portugal,1.76,1.62,2 - 2,Serbia,Portugal,3495151
+2021-03-27,Czechia,Belgium,0.9,0.99,1 - 1,Czech Republic,Belgium,3495231
+2021-03-27,Netherlands,Latvia,6.44,0.35,2 - 0,Netherlands,Latvia,3495289
+2021-03-27,Norway,Turkiye,0.91,1.13,0 - 3,Norway,Turkey,3495288
+2021-03-27,Croatia,Cyprus,1.5,0.12,1 - 0,Croatia,Cyprus,3495318
+2021-03-28,Georgia,Spain,0.26,1.14,1 - 2,Georgia,Spain,3495170
+2021-03-28,Kosovo,Sweden,0.63,3.78,0 - 3,Kosovo,Sweden,3495171
+2021-03-28,Switzerland,Lithuania,2.07,0.13,1 - 0,Switzerland,Lithuania,3495191
+2021-03-28,Kazakhstan,France,0.13,2.99,0 - 2,Kazakhstan,France,3495210
+2021-03-28,Denmark,Moldova,3.78,0.18,8 - 0,Denmark,Moldova,3495254
+2021-03-28,Austria,Faroe Islands,4.31,0.94,3 - 1,Austria,Faroe Islands,3495255
+2021-03-28,Israel,Scotland,0.64,0.68,1 - 1,Israel,Scotland,3495256
+2021-03-28,Albania,England,0.39,1.74,0 - 2,Albania,England,3495347
+2021-03-28,Poland,Andorra,3.43,0.07,3 - 0,Poland,Andorra,3495348
+2021-03-28,Romania,Germany,1.13,2.84,0 - 1,Romania,Germany,3495379
+2021-03-30,Azerbaijan,Serbia,1.67,1.19,1 - 2,Azerbaijan,Serbia,3495152
+2021-03-30,Luxembourg,Portugal,0.52,2.63,1 - 3,Luxembourg,Portugal,3495153
+2021-03-30,Belgium,Belarus,4.2,0.17,8 - 0,Belgium,Belarus,3495232
+2021-03-30,Wales,Czechia,1.07,0.86,1 - 0,Wales,Czech Republic,3495233
+2021-03-30,Gibraltar,Netherlands,0.0,7.49,0 - 7,Gibraltar,Netherlands,3495290
+2021-03-30,Montenegro,Norway,0.98,1.36,0 - 1,Montenegro,Norway,3495291
+2021-03-30,Turkiye,Latvia,2.09,1.38,3 - 3,Turkey,Latvia,3495292
+2021-03-30,Croatia,Malta,2.99,0.16,3 - 0,Croatia,Malta,3495320
+2021-03-31,Spain,Kosovo,2.32,0.49,3 - 1,Spain,Kosovo,3495173
+2021-03-31,Bosnia and Herzegovina,France,0.61,1.17,0 - 1,Bosnia and Herzegovina,France,3495212
+2021-03-31,Austria,Denmark,0.22,2.06,0 - 4,Austria,Denmark,3495257
+2021-03-31,Scotland,Faroe Islands,0.95,0.61,4 - 0,Scotland,Faroe Islands,3495259
+2021-03-31,England,Poland,1.35,0.55,2 - 1,England,Poland,3495351
+2021-03-31,Germany,North Macedonia,1.74,1.03,1 - 2,Germany,North Macedonia,3495381
+2021-06-11,Türkiye,Italy,0.19,1.58,0 - 3,Turkey,Italy,3230637
+2021-06-12,Wales,Switzerland,0.47,1.53,1 - 1,Wales,Switzerland,3230638
+2021-06-12,Denmark,Finland,0.99,0.23,0 - 1,Denmark,Finland,3230643
+2021-06-12,Belgium,Russia,1.22,0.25,3 - 0,Belgium,Russia,3230644
+2021-06-13,England,Croatia,0.74,0.52,1 - 0,England,Croatia,3230655
+2021-06-13,Austria,North Macedonia,1.47,0.79,3 - 1,Austria,North Macedonia,3230650
+2021-06-13,Netherlands,Ukraine,1.38,0.48,3 - 2,Netherlands,Ukraine,3230649
+2021-06-14,Scotland,Czechia,2.17,0.81,0 - 2,Scotland,Czech Republic,3230656
+2021-06-14,Poland,Slovakia,1.66,0.36,1 - 2,Poland,Slovakia,3230662
+2021-06-14,Spain,Sweden,2.08,0.82,0 - 0,Spain,Sweden,3230661
+2021-06-15,Hungary,Portugal,0.19,1.96,0 - 3,Hungary,Portugal,3230667
+2021-06-15,France,Germany,0.4,0.77,1 - 0,France,Germany,3230668
+2021-06-16,Türkiye,Wales,1.03,2.3,0 - 2,Turkey,Wales,3230639
+2021-06-16,Italy,Switzerland,1.98,0.21,3 - 0,Italy,Switzerland,3230640
+2021-06-17,Netherlands,Austria,2.22,0.38,2 - 0,Netherlands,Austria,3230651
+2021-06-17,Denmark,Belgium,1.26,1.42,1 - 2,Denmark,Belgium,3230645
+2021-06-18,Sweden,Slovakia,0.89,0.5,1 - 0,Sweden,Slovakia,3230664
+2021-06-18,Croatia,Czechia,0.99,0.9,1 - 1,Croatia,Czech Republic,3230658
+2021-06-18,England,Scotland,1.14,0.96,0 - 0,England,Scotland,3230657
+2021-06-19,Hungary,France,0.35,1.81,1 - 1,Hungary,France,3230669
+2021-06-19,Portugal,Germany,2.09,2.57,2 - 4,Portugal,Germany,3230670
+2021-06-19,Spain,Poland,1.91,0.76,1 - 1,Spain,Poland,3230663
+2021-06-20,Italy,Wales,1.55,0.35,1 - 0,Italy,Wales,3230642
+2021-06-20,Switzerland,Türkiye,2.22,0.81,3 - 1,Switzerland,Turkey,3230641
+2021-06-21,North Macedonia,Netherlands,0.74,2.66,0 - 3,North Macedonia,Netherlands,3230653
+2021-06-21,Ukraine,Austria,0.22,1.4,0 - 1,Ukraine,Austria,3230654
+2021-06-21,Finland,Belgium,0.28,1.34,0 - 2,Finland,Belgium,3230648
+2021-06-21,Russia,Denmark,0.28,2.23,1 - 4,Russia,Denmark,3230647
+2021-06-22,Croatia,Scotland,0.64,1.27,3 - 1,Croatia,Scotland,3230660
+2021-06-22,Czechia,England,0.33,0.61,0 - 1,Czech Republic,England,3230659
+2021-06-23,Slovakia,Spain,0.12,2.58,0 - 5,Slovakia,Spain,3230665
+2021-06-23,Sweden,Poland,1.06,2.03,3 - 2,Sweden,Poland,3230666
+2021-06-23,Germany,Hungary,1.8,0.59,2 - 2,Germany,Hungary,3230671
+2021-06-23,Portugal,France,0.42,0.88,2 - 2,Portugal,France,3230672
+2021-06-26,Wales,Denmark,0.75,2.04,0 - 4,Wales,Denmark,2767769
+2021-06-26,Italy,Austria,1.43,0.76,2 - 1,Italy,Austria,2767768
+2021-06-27,Netherlands,Czechia,0.87,1.02,0 - 2,Netherlands,Czech Republic,2767771
+2021-06-27,Belgium,Portugal,0.24,1.34,1 - 0,Belgium,Portugal,2767770
+2021-06-28,Croatia,Spain,2.54,3.17,3 - 5,Croatia,Spain,2767772
+2021-06-28,France,Switzerland,3.11,1.43,3 - 3,France,Switzerland,2767773
+2021-06-29,England,Germany,1.09,1.17,2 - 0,England,Germany,2767775
+2021-06-29,Sweden,Ukraine,1.28,1.36,1 - 2,Sweden,Ukraine,2767774
+2021-07-02,Switzerland,Spain,0.69,3.43,1 - 1,Switzerland,Spain,2767865
+2021-07-02,Belgium,Italy,0.78,1.55,1 - 2,Belgium,Italy,2767866
+2021-07-03,Czechia,Denmark,1.11,1.45,1 - 2,Czech Republic,Denmark,2767867
+2021-07-03,Ukraine,England,0.19,1.41,0 - 4,Ukraine,England,2767868
+2021-07-06,Italy,Spain,0.56,1.62,1 - 1,Italy,Spain,2767870
+2021-07-07,England,Denmark,2.08,0.24,2 - 1,England,Denmark,2767871
+2021-07-11,Italy,England,1.98,0.4,1 - 1,Italy,England,2767869
+2021-09-01,Portugal,Ireland,2.94,0.66,2 - 1,Portugal,Republic of Ireland,3495155
+2021-09-01,France,Bosnia and Herzegovina,0.45,0.31,1 - 1,France,Bosnia and Herzegovina,3495215
+2021-09-01,Denmark,Scotland,1.67,0.59,2 - 0,Denmark,Scotland,3495260
+2021-09-01,Moldova,Austria,0.19,1.59,0 - 2,Moldova,Austria,3495262
+2021-09-01,Norway,Netherlands,0.88,2.26,1 - 1,Norway,Netherlands,3495294
+2021-09-01,Türkiye,Montenegro,1.53,0.85,2 - 2,Turkey,Montenegro,3495295
+2021-09-01,Russia,Croatia,0.44,0.86,0 - 0,Russia,Croatia,3495324
+2021-09-02,Sweden,Spain,0.45,2.09,2 - 1,Sweden,Spain,3495175
+2021-09-02,Czechia,Belarus,1.92,0.24,1 - 0,Czech Republic,Belarus,3495234
+2021-09-02,Estonia,Belgium,1.3,3.73,2 - 5,Estonia,Belgium,3495235
+2021-09-02,Hungary,England,0.24,3.22,0 - 4,Hungary,England,3495354
+2021-09-02,Poland,Albania,1.81,0.51,4 - 1,Poland,Albania,3495355
+2021-09-02,Liechtenstein,Germany,0.05,2.81,0 - 2,Liechtenstein,Germany,3495384
+2021-09-04,Serbia,Luxembourg,3.65,0.42,4 - 1,Serbia,Luxembourg,3495157
+2021-09-04,Ukraine,France,1.01,2.19,1 - 1,Ukraine,France,3495217
+2021-09-04,Faroe Islands,Denmark,0.88,2.29,0 - 1,Faroe Islands,Denmark,3495263
+2021-09-04,Israel,Austria,2.12,2.61,5 - 2,Israel,Austria,3495264
+2021-09-04,Scotland,Moldova,2.49,0.24,1 - 0,Scotland,Moldova,3495265
+2021-09-04,Latvia,Norway,0.09,3.07,0 - 2,Latvia,Norway,3495296
+2021-09-04,Gibraltar,Türkiye,0.16,2.37,0 - 3,Gibraltar,Turkey,3495297
+2021-09-04,Netherlands,Montenegro,2.71,0.4,4 - 0,Netherlands,Montenegro,3495298
+2021-09-04,Slovakia,Croatia,1.64,0.72,0 - 1,Slovakia,Croatia,3495328
+2021-09-05,Spain,Georgia,2.28,0.55,4 - 0,Spain,Georgia,3495177
+2021-09-05,Switzerland,Italy,0.38,2.09,0 - 0,Switzerland,Italy,3495197
+2021-09-05,Belarus,Wales,1.94,2.85,2 - 3,Belarus,Wales,3495236
+2021-09-05,Belgium,Czechia,2.15,1.29,3 - 0,Belgium,Czech Republic,3495237
+2021-09-05,England,Andorra,3.01,0.02,4 - 0,England,Andorra,3495357
+2021-09-05,San Marino,Poland,0.39,5.48,1 - 7,San Marino,Poland,3495358
+2021-09-05,Germany,Armenia,3.7,0.16,6 - 0,Germany,Armenia,3495387
+2021-09-07,Azerbaijan,Portugal,0.31,2.85,0 - 3,Azerbaijan,Portugal,3495158
+2021-09-07,Ireland,Serbia,0.35,1.95,1 - 1,Republic of Ireland,Serbia,3495159
+2021-09-07,Bosnia and Herzegovina,Kazakhstan,3.01,0.98,2 - 2,Bosnia and Herzegovina,Kazakhstan,3495218
+2021-09-07,France,Finland,1.35,0.41,2 - 0,France,Finland,3495219
+2021-09-07,Austria,Scotland,1.29,1.3,0 - 1,Austria,Scotland,3495266
+2021-09-07,Denmark,Israel,3.03,0.1,5 - 0,Denmark,Israel,3495267
+2021-09-07,Netherlands,Türkiye,5.23,1.3,6 - 1,Netherlands,Turkey,3495300
+2021-09-07,Norway,Gibraltar,6.14,0.43,5 - 1,Norway,Gibraltar,3495301
+2021-09-07,Croatia,Slovenia,3.23,0.27,3 - 0,Croatia,Slovenia,3495329
+2021-09-08,Greece,Sweden,2.47,2.17,2 - 1,Greece,Sweden,3495178
+2021-09-08,Kosovo,Spain,0.69,1.58,0 - 2,Kosovo,Spain,3495179
+2021-09-08,Northern Ireland,Switzerland,0.54,1.91,0 - 0,Northern Ireland,Switzerland,3495199
+2021-09-08,Belarus,Belgium,0.15,0.65,0 - 1,Belarus,Belgium,3495238
+2021-09-08,Wales,Estonia,1.89,0.22,0 - 0,Wales,Estonia,3495239
+2021-09-08,Poland,England,1.0,0.56,1 - 1,Poland,England,3495361
+2021-09-08,Iceland,Germany,0.2,3.31,0 - 4,Iceland,Germany,3495390
+2021-10-06,Italy,Spain,1.56,2.25,1 - 2,Italy,Spain,3492720
+2021-10-07,Belgium,France,0.6,2.39,2 - 3,Belgium,France,3492721
+2021-10-08,Czechia,Wales,0.85,2.48,2 - 2,Czech Republic,Wales,3495240
+2021-10-08,Latvia,Netherlands,0.76,2.38,0 - 1,Latvia,Netherlands,3495303
+2021-10-08,Turkiye,Norway,1.0,1.4,1 - 1,Turkey,Norway,3495304
+2021-10-08,Cyprus,Croatia,0.26,4.38,0 - 3,Cyprus,Croatia,3495332
+2021-10-08,Germany,Romania,2.96,0.86,2 - 1,Germany,Romania,3495392
+2021-10-09,Luxembourg,Serbia,0.67,1.71,0 - 1,Luxembourg,Serbia,3495161
+2021-10-09,Sweden,Kosovo,2.65,0.56,3 - 0,Sweden,Kosovo,3495180
+2021-10-09,Switzerland,Northern Ireland,4.42,0.08,2 - 0,Switzerland,Northern Ireland,3495201
+2021-10-09,Kazakhstan,Bosnia and Herzegovina,0.24,2.3,0 - 2,Kazakhstan,Bosnia and Herzegovina,3495220
+2021-10-09,Scotland,Israel,3.53,1.14,3 - 2,Scotland,Israel,3495269
+2021-10-09,Faroe Islands,Austria,0.62,2.82,0 - 2,Faroe Islands,Austria,3495270
+2021-10-09,Moldova,Denmark,0.0,3.37,0 - 4,Moldova,Denmark,3495271
+2021-10-09,Andorra,England,0.03,4.16,0 - 5,Andorra,England,3495362
+2021-10-09,Poland,San Marino,4.74,0.09,5 - 0,Poland,San Marino,3495364
+2021-10-10,Italy,Belgium,1.59,1.63,2 - 1,Italy,Belgium,3492725
+2021-10-10,Spain,France,0.8,1.07,1 - 2,Spain,France,3492724
+2021-10-11,Belarus,Czechia,0.24,2.35,0 - 2,Belarus,Czech Republic,3495242
+2021-10-11,Estonia,Wales,0.89,1.85,0 - 1,Estonia,Wales,3495243
+2021-10-11,Latvia,Turkiye,0.33,2.07,1 - 2,Latvia,Turkey,3495305
+2021-10-11,Netherlands,Gibraltar,6.13,0.06,6 - 0,Netherlands,Gibraltar,3495306
+2021-10-11,Norway,Montenegro,0.98,0.31,2 - 0,Norway,Montenegro,3495307
+2021-10-11,Croatia,Slovakia,2.86,0.97,2 - 2,Croatia,Slovakia,3495335
+2021-10-11,North Macedonia,Germany,0.56,3.58,0 - 4,North Macedonia,Germany,3495396
+2021-10-12,Portugal,Luxembourg,5.97,0.33,5 - 0,Portugal,Luxembourg,3495162
+2021-10-12,Serbia,Azerbaijan,4.21,0.9,3 - 1,Serbia,Azerbaijan,3495163
+2021-10-12,Sweden,Greece,1.54,0.54,2 - 0,Sweden,Greece,3495182
+2021-10-12,Lithuania,Switzerland,0.59,2.42,0 - 4,Lithuania,Switzerland,3495203
+2021-10-12,Ukraine,Bosnia and Herzegovina,1.47,1.09,1 - 1,Ukraine,Bosnia and Herzegovina,3495223
+2021-10-12,Denmark,Austria,0.77,0.29,1 - 0,Denmark,Austria,3495272
+2021-10-12,Faroe Islands,Scotland,1.17,1.29,0 - 1,Faroe Islands,Scotland,3495273
+2021-10-12,Albania,Poland,0.2,0.59,0 - 1,Albania,Poland,3495365
+2021-10-12,England,Hungary,2.32,1.06,1 - 1,England,Hungary,3495366
+2021-11-11,Ireland,Portugal,0.63,0.56,0 - 0,Republic of Ireland,Portugal,3495165
+2021-11-11,Georgia,Sweden,1.55,2.86,2 - 0,Georgia,Sweden,3495184
+2021-11-11,Greece,Spain,0.18,1.57,0 - 1,Greece,Spain,3495185
+2021-11-11,Malta,Croatia,0.07,3.65,1 - 7,Malta,Croatia,3495339
+2021-11-11,Germany,Liechtenstein,7.6,0.08,9 - 0,Germany,Liechtenstein,3495399
+2021-11-12,Italy,Switzerland,2.16,0.75,1 - 1,Italy,Switzerland,3495204
+2021-11-12,Moldova,Scotland,1.25,2.11,0 - 2,Moldova,Scotland,3495277
+2021-11-12,Austria,Israel,3.41,0.29,4 - 2,Austria,Israel,3495275
+2021-11-12,Denmark,Faroe Islands,2.37,0.59,3 - 1,Denmark,Faroe Islands,3495276
+2021-11-12,Andorra,Poland,0.17,3.06,1 - 4,Andorra,Poland,3495368
+2021-11-12,England,Albania,2.59,0.39,5 - 0,England,Albania,3495369
+2021-11-13,Bosnia and Herzegovina,Finland,2.46,2.38,1 - 3,Bosnia and Herzegovina,Finland,3495224
+2021-11-13,France,Kazakhstan,4.38,0.17,8 - 0,France,Kazakhstan,3495225
+2021-11-13,Belgium,Estonia,2.82,0.77,3 - 1,Belgium,Estonia,3495244
+2021-11-13,Wales,Belarus,3.08,0.19,5 - 1,Wales,Belarus,3495245
+2021-11-13,Norway,Latvia,2.43,0.35,0 - 0,Norway,Latvia,3495308
+2021-11-13,Turkiye,Gibraltar,3.99,0.13,6 - 0,Turkey,Gibraltar,3495309
+2021-11-13,Montenegro,Netherlands,1.04,1.84,2 - 2,Montenegro,Netherlands,3495310
+2021-11-14,Portugal,Serbia,0.58,0.58,1 - 2,Portugal,Serbia,3495167
+2021-11-14,Spain,Sweden,1.22,0.44,1 - 0,Spain,Sweden,3495187
+2021-11-14,Croatia,Russia,1.74,0.06,1 - 0,Croatia,Russia,3495341
+2021-11-14,Armenia,Germany,0.95,3.45,1 - 4,Armenia,Germany,3495401
+2021-11-15,Switzerland,Bulgaria,2.27,0.03,4 - 0,Switzerland,Bulgaria,3495207
+2021-11-15,Austria,Moldova,1.78,0.68,4 - 1,Austria,Moldova,3495278
+2021-11-15,Scotland,Denmark,2.0,0.55,2 - 0,Scotland,Denmark,3495280
+2021-11-15,Poland,Hungary,1.4,1.37,1 - 2,Poland,Hungary,3495372
+2021-11-15,San Marino,England,0.07,5.85,0 - 10,San Marino,England,3495373
+2021-11-16,Bosnia and Herzegovina,Ukraine,0.71,2.71,0 - 2,Bosnia and Herzegovina,Ukraine,3495226
+2021-11-16,Finland,France,0.44,0.48,0 - 2,Finland,France,3495227
+2021-11-16,Czechia,Estonia,2.36,0.67,2 - 0,Czech Republic,Estonia,3495246
+2021-11-16,Wales,Belgium,0.42,1.04,1 - 1,Wales,Belgium,3495247
+2021-11-16,Montenegro,Turkiye,0.94,1.92,1 - 2,Montenegro,Turkey,3495312
+2021-11-16,Netherlands,Norway,1.91,0.08,2 - 0,Netherlands,Norway,3495313
+2022-03-24,Portugal,Turkiye,3.72,1.78,3 - 1,Portugal,Turkey,3774163
+2022-03-24,Sweden,Czechia,1.48,0.89,1 - 0,Sweden,Czech Republic,3774161
+2022-03-24,Wales,Austria,1.2,1.05,2 - 1,Wales,Austria,3774159
+2022-03-29,Poland,Sweden,1.96,1.31,2 - 0,Poland,Sweden,3774167
+2022-03-29,Portugal,North Macedonia,1.85,0.09,2 - 0,Portugal,North Macedonia,3774168
+2022-06-01,Scotland,Ukraine,1.29,2.51,1 - 3,Scotland,Ukraine,3774158
+2022-06-01,Poland,Wales,1.4,0.94,2 - 1,Poland,Wales,3784577
+2022-06-02,Czechia,Switzerland,1.25,2.51,2 - 1,Czech Republic,Switzerland,3784526
+2022-06-02,Spain,Portugal,2.0,0.81,1 - 1,Spain,Portugal,3784527
+2022-06-02,Serbia,Norway,1.42,1.3,0 - 1,Serbia,Norway,3784625
+2022-06-02,Slovenia,Sweden,1.42,1.87,0 - 2,Slovenia,Sweden,3784626
+2022-06-03,Croatia,Austria,1.27,1.94,0 - 3,Croatia,Austria,3784510
+2022-06-03,France,Denmark,2.04,1.71,1 - 2,France,Denmark,3784511
+2022-06-03,Belgium,Netherlands,1.27,2.5,1 - 4,Belgium,Netherlands,3784576
+2022-06-04,Hungary,England,1.64,1.13,1 - 0,Hungary,England,3784552
+2022-06-04,Italy,Germany,1.57,1.06,1 - 1,Italy,Germany,3784553
+2022-06-04,Finland,Bosnia and Herzegovina,1.91,1.64,1 - 1,Finland,Bosnia and Herzegovina,3784600
+2022-06-04,Türkiye,Faroe Islands,2.38,0.09,4 - 0,Turkey,Faroe Islands,3784541
+2022-06-05,Wales,Ukraine,0.73,2.21,1 - 0,Wales,Ukraine,3774166
+2022-06-05,Czechia,Spain,2.03,1.2,2 - 2,Czech Republic,Spain,3784528
+2022-06-05,Portugal,Switzerland,3.55,0.22,4 - 0,Portugal,Switzerland,3784529
+2022-06-05,Serbia,Slovenia,3.1,0.87,4 - 1,Serbia,Slovenia,3784627
+2022-06-05,Sweden,Norway,0.78,2.89,1 - 2,Sweden,Norway,3784628
+2022-06-06,Croatia,France,1.73,0.82,1 - 1,Croatia,France,3784513
+2022-06-06,Austria,Denmark,1.8,1.2,1 - 2,Austria,Denmark,3784512
+2022-06-07,Germany,England,0.71,1.96,1 - 1,Germany,England,3784554
+2022-06-07,Bosnia and Herzegovina,Romania,0.68,1.77,1 - 0,Bosnia and Herzegovina,Romania,3784602
+2022-06-07,Lithuania,Türkiye,0.49,4.76,0 - 6,Lithuania,Turkey,3784543
+2022-06-08,Belgium,Poland,2.78,0.68,6 - 1,Belgium,Poland,3784578
+2022-06-08,Wales,Netherlands,0.61,0.58,1 - 2,Wales,Netherlands,3784579
+2022-06-08,Scotland,Armenia,2.57,0.32,2 - 0,Scotland,Armenia,3784504
+2022-06-09,Portugal,Czechia,1.47,0.88,2 - 0,Portugal,Czech Republic,3784530
+2022-06-09,Switzerland,Spain,0.75,1.02,0 - 1,Switzerland,Spain,3784531
+2022-06-09,Norway,Slovenia,1.57,0.75,0 - 0,Norway,Slovenia,3784629
+2022-06-09,Sweden,Serbia,0.93,1.05,0 - 1,Sweden,Serbia,3784630
+2022-06-10,Austria,France,0.7,1.56,1 - 1,Austria,France,3784514
+2022-06-10,Denmark,Croatia,0.88,1.36,0 - 1,Denmark,Croatia,3784515
+2022-06-11,England,Italy,1.54,1.39,0 - 0,England,Italy,3784556
+2022-06-11,Hungary,Germany,1.53,1.44,1 - 1,Hungary,Germany,3784557
+2022-06-11,Netherlands,Poland,2.74,0.92,2 - 2,Netherlands,Poland,3784580
+2022-06-11,Wales,Belgium,1.55,1.49,1 - 1,Wales,Belgium,3784581
+2022-06-11,Ireland,Scotland,1.32,0.92,3 - 0,Republic of Ireland,Scotland,3784508
+2022-06-11,Montenegro,Bosnia and Herzegovina,0.61,1.05,1 - 1,Montenegro,Bosnia and Herzegovina,3784604
+2022-06-11,Luxembourg,Türkiye,0.35,1.86,0 - 2,Luxembourg,Turkey,3784545
+2022-06-12,Spain,Czechia,1.69,1.12,2 - 0,Spain,Czech Republic,3784532
+2022-06-12,Switzerland,Portugal,0.67,1.47,1 - 0,Switzerland,Portugal,3784533
+2022-06-12,Norway,Sweden,2.21,1.61,3 - 2,Norway,Sweden,3784631
+2022-06-12,Slovenia,Serbia,0.48,1.44,2 - 2,Slovenia,Serbia,3784632
+2022-06-13,Denmark,Austria,1.78,0.51,2 - 0,Denmark,Austria,3784516
+2022-06-13,France,Croatia,1.03,0.96,0 - 1,France,Croatia,3784517
+2022-06-14,England,Hungary,0.89,1.09,0 - 4,England,Hungary,3784558
+2022-06-14,Germany,Italy,3.42,1.89,5 - 2,Germany,Italy,3784559
+2022-06-14,Netherlands,Wales,1.54,1.36,3 - 2,Netherlands,Wales,3784582
+2022-06-14,Poland,Belgium,1.14,1.36,0 - 1,Poland,Belgium,3784583
+2022-06-14,Armenia,Scotland,1.58,1.48,1 - 4,Armenia,Scotland,3784522
+2022-06-14,Bosnia and Herzegovina,Finland,2.56,1.51,3 - 2,Bosnia and Herzegovina,Finland,3784606
+2022-06-14,Türkiye,Lithuania,3.67,0.38,2 - 0,Turkey,Lithuania,3784547
+2022-09-21,Scotland,Ukraine,2.97,0.1,3 - 0,Scotland,Ukraine,3784507
+2022-09-22,Croatia,Denmark,0.88,0.3,2 - 1,Croatia,Denmark,3784518
+2022-09-22,France,Austria,2.21,0.19,2 - 0,France,Austria,3784519
+2022-09-22,Belgium,Wales,2.66,0.86,2 - 1,Belgium,Wales,3784584
+2022-09-22,Poland,Netherlands,0.6,1.47,0 - 2,Poland,Netherlands,3784585
+2022-09-22,Turkiye,Luxembourg,3.36,0.8,3 - 3,Turkey,Luxembourg,3784549
+2022-09-23,Germany,Hungary,0.89,0.7,0 - 1,Germany,Hungary,3784560
+2022-09-23,Italy,England,0.49,0.91,1 - 0,Italy,England,3784561
+2022-09-23,Bosnia and Herzegovina,Montenegro,0.67,0.5,1 - 0,Bosnia and Herzegovina,Montenegro,3784608
+2022-09-24,Czechia,Portugal,1.53,2.85,0 - 4,Czech Republic,Portugal,3784534
+2022-09-24,Spain,Switzerland,0.48,1.34,1 - 2,Spain,Switzerland,3784535
+2022-09-24,Scotland,Ireland,2.03,0.73,2 - 1,Scotland,Republic of Ireland,3784525
+2022-09-24,Slovenia,Norway,1.06,1.73,2 - 1,Slovenia,Norway,3784633
+2022-09-24,Serbia,Sweden,2.13,0.74,4 - 1,Serbia,Sweden,3784634
+2022-09-25,Austria,Croatia,1.35,1.13,1 - 3,Austria,Croatia,3784520
+2022-09-25,Denmark,France,1.75,1.61,2 - 0,Denmark,France,3784521
+2022-09-25,Netherlands,Belgium,1.42,1.31,1 - 0,Netherlands,Belgium,3784586
+2022-09-25,Wales,Poland,0.91,0.74,0 - 1,Wales,Poland,3784587
+2022-09-25,Faroe Islands,Turkiye,0.39,0.41,2 - 1,Faroe Islands,Turkey,3784550
+2022-09-26,England,Germany,2.05,1.82,3 - 3,England,Germany,3784562
+2022-09-26,Romania,Bosnia and Herzegovina,2.51,0.87,4 - 1,Romania,Bosnia and Herzegovina,3784611
+2022-09-27,Portugal,Spain,0.67,1.32,0 - 1,Portugal,Spain,3784536
+2022-09-27,Switzerland,Czechia,1.23,1.87,2 - 1,Switzerland,Czech Republic,3784537
+2022-09-27,Ukraine,Scotland,1.58,0.31,0 - 0,Ukraine,Scotland,3784539
+2022-09-27,Norway,Serbia,0.74,0.71,0 - 2,Norway,Serbia,3784635
+2022-09-27,Sweden,Slovenia,1.11,1.47,1 - 1,Sweden,Slovenia,3784636
+2022-11-20,Qatar,Ecuador,0.32,1.18,0 - 2,Qatar,Ecuador,3370549
+2022-11-21,England,Iran,2.11,1.75,6 - 2,England,Iran,3854559
+2022-11-21,USA,Wales,0.79,1.55,1 - 1,United States,Wales,3854560
+2022-11-21,Senegal,Netherlands,0.89,0.67,0 - 2,Senegal,Netherlands,3854554
+2022-11-22,Argentina,Saudi Arabia,2.26,0.15,1 - 2,Argentina,Saudi Arabia,3854572
+2022-11-22,Mexico,Poland,0.72,0.94,0 - 0,Mexico,Poland,3854573
+2022-11-22,Denmark,Tunisia,1.6,0.92,0 - 0,Denmark,Tunisia,3854580
+2022-11-22,France,Australia,4.21,0.52,4 - 1,France,Australia,3854579
+2022-11-23,Morocco,Croatia,0.37,0.52,0 - 0,Morocco,Croatia,3854592
+2022-11-23,Belgium,Canada,0.77,2.63,1 - 0,Belgium,Canada,3854591
+2022-11-23,Germany,Japan,3.09,1.46,1 - 2,Germany,Japan,3854586
+2022-11-23,Spain,Costa Rica,3.53,0.0,7 - 0,Spain,Costa Rica,3854585
+2022-11-24,Switzerland,Cameroon,1.44,0.74,1 - 0,Switzerland,Cameroon,3854598
+2022-11-24,Brazil,Serbia,2.43,0.18,2 - 0,Brazil,Serbia,3854597
+2022-11-24,Uruguay,South Korea,0.59,0.64,0 - 0,Uruguay,South Korea,3854604
+2022-11-24,Portugal,Ghana,2.0,0.93,3 - 2,Portugal,Ghana,3854603
+2022-11-25,Wales,Iran,0.89,1.47,0 - 2,Wales,Iran,3854562
+2022-11-25,England,USA,0.77,0.63,0 - 0,England,United States,3854561
+2022-11-25,Qatar,Senegal,0.96,0.75,1 - 3,Qatar,Senegal,3854555
+2022-11-25,Netherlands,Ecuador,0.1,1.68,1 - 1,Netherlands,Ecuador,3854556
+2022-11-26,Tunisia,Australia,0.94,0.61,0 - 1,Tunisia,Australia,3854582
+2022-11-26,France,Denmark,2.42,0.64,2 - 1,France,Denmark,3854581
+2022-11-26,Poland,Saudi Arabia,1.56,1.73,2 - 0,Poland,Saudi Arabia,3854575
+2022-11-26,Argentina,Mexico,0.32,0.27,2 - 0,Argentina,Mexico,3854574
+2022-11-27,Japan,Costa Rica,0.88,0.11,0 - 1,Japan,Costa Rica,3854588
+2022-11-27,Spain,Germany,0.57,1.22,1 - 1,Spain,Germany,3854587
+2022-11-27,Belgium,Morocco,0.96,1.48,0 - 2,Belgium,Morocco,3854593
+2022-11-27,Croatia,Canada,2.33,0.39,4 - 1,Croatia,Canada,3854594
+2022-11-28,Cameroon,Serbia,2.29,1.88,3 - 3,Cameroon,Serbia,3854600
+2022-11-28,Brazil,Switzerland,1.02,0.3,1 - 0,Brazil,Switzerland,3854599
+2022-11-28,South Korea,Ghana,1.8,1.68,2 - 3,South Korea,Ghana,3854606
+2022-11-28,Portugal,Uruguay,1.33,1.27,2 - 0,Portugal,Uruguay,3854605
+2022-11-29,Ecuador,Senegal,0.93,2.14,1 - 2,Ecuador,Senegal,3854558
+2022-11-29,Netherlands,Qatar,1.61,0.14,2 - 0,Netherlands,Qatar,3854557
+2022-11-29,Iran,USA,0.42,1.18,0 - 1,Iran,United States,3854564
+2022-11-29,Wales,England,0.35,2.46,0 - 3,Wales,England,3854563
+2022-11-30,Australia,Denmark,0.59,0.65,1 - 0,Australia,Denmark,3854584
+2022-11-30,Tunisia,France,0.46,0.76,1 - 0,Tunisia,France,3854583
+2022-11-30,Poland,Argentina,0.32,3.69,0 - 2,Poland,Argentina,3854576
+2022-11-30,Saudi Arabia,Mexico,1.11,2.3,1 - 2,Saudi Arabia,Mexico,3854577
+2022-12-01,Canada,Morocco,1.35,0.53,1 - 2,Canada,Morocco,3854596
+2022-12-01,Croatia,Belgium,0.7,3.07,0 - 0,Croatia,Belgium,3854595
+2022-12-01,Costa Rica,Germany,1.33,5.77,2 - 4,Costa Rica,Germany,3854590
+2022-12-01,Japan,Spain,1.45,1.04,2 - 1,Japan,Spain,3854589
+2022-12-02,Ghana,Uruguay,1.61,1.81,0 - 2,Ghana,Uruguay,3854608
+2022-12-02,South Korea,Portugal,1.71,1.29,2 - 1,South Korea,Portugal,3854607
+2022-12-02,Cameroon,Brazil,0.47,2.48,1 - 0,Cameroon,Brazil,3854601
+2022-12-02,Serbia,Switzerland,1.32,2.8,2 - 3,Serbia,Switzerland,3854602
+2022-12-03,Netherlands,USA,1.67,1.49,3 - 1,Netherlands,United States,3370550
+2022-12-03,Argentina,Australia,2.98,0.64,2 - 1,Argentina,Australia,3370551
+2022-12-04,France,Poland,1.37,1.75,3 - 1,France,Poland,3370552
+2022-12-04,England,Senegal,1.02,0.8,3 - 0,England,Senegal,3370553
+2022-12-05,Japan,Croatia,1.21,1.45,1 - 1,Japan,Croatia,3370555
+2022-12-05,Brazil,South Korea,3.6,0.48,4 - 1,Brazil,South Korea,3370554
+2022-12-06,Morocco,Spain,0.72,1.01,0 - 0,Morocco,Spain,3370556
+2022-12-06,Portugal,Switzerland,2.36,1.07,6 - 1,Portugal,Switzerland,3370557
+2022-12-09,Croatia,Brazil,0.63,2.55,1 - 1,Croatia,Brazil,3370565
+2022-12-09,Netherlands,Argentina,0.55,1.92,2 - 2,Netherlands,Argentina,3370566
+2022-12-10,Morocco,Portugal,1.4,0.92,1 - 0,Morocco,Portugal,3370567
+2022-12-10,England,France,2.41,1.01,1 - 2,England,France,3370568
+2022-12-13,Argentina,Croatia,2.34,0.52,3 - 0,Argentina,Croatia,3370569
+2022-12-14,France,Morocco,2.1,1.0,2 - 0,France,Morocco,3370570
+2022-12-17,Croatia,Morocco,0.66,1.19,2 - 1,Croatia,Morocco,3370571
+2022-12-18,Argentina,France,3.23,2.27,3 - 3,Argentina,France,3370572
+2023-03-23,Italy,England,1.52,2.15,1 - 2,Italy,England,4044678
+2023-03-23,Denmark,Finland,2.73,0.91,3 - 1,Denmark,Finland,4044779
+2023-03-23,Bosnia and Herzegovina,Iceland,1.13,0.66,3 - 0,Bosnia and Herzegovina,Iceland,4044579
+2023-03-23,Portugal,Liechtenstein,4.06,0.03,4 - 0,Portugal,Liechtenstein,4044578
+2023-03-24,France,Netherlands,1.54,1.53,4 - 0,France,Netherlands,4044666
+2023-03-24,Czechia,Poland,1.78,1.29,3 - 1,Czech Republic,Poland,4044718
+2023-03-24,Austria,Azerbaijan,2.86,0.7,4 - 1,Austria,Azerbaijan,4044759
+2023-03-24,Sweden,Belgium,0.55,2.52,0 - 3,Sweden,Belgium,4044758
+2023-03-24,Serbia,Lithuania,1.76,0.4,2 - 0,Serbia,Lithuania,4044739
+2023-03-25,Scotland,Cyprus,1.51,0.18,3 - 0,Scotland,Cyprus,4044557
+2023-03-25,Spain,Norway,1.61,0.6,3 - 0,Spain,Norway,4044565
+2023-03-25,Armenia,Turkiye,0.65,0.67,1 - 2,Armenia,Turkey,4044698
+2023-03-25,Croatia,Wales,1.41,0.61,1 - 1,Croatia,Wales,4044699
+2023-03-25,Belarus,Switzerland,0.85,3.18,0 - 5,Belarus,Switzerland,4044634
+2023-03-26,England,Ukraine,2.08,0.11,2 - 0,England,Ukraine,4044680
+2023-03-26,Kazakhstan,Denmark,1.62,2.14,3 - 2,Kazakhstan,Denmark,4044781
+2023-03-26,Luxembourg,Portugal,0.43,3.78,0 - 6,Luxembourg,Portugal,4044582
+2023-03-26,Slovakia,Bosnia and Herzegovina,1.24,0.79,2 - 0,Slovakia,Bosnia and Herzegovina,4044581
+2023-03-27,Ireland,France,0.67,0.99,0 - 1,Republic of Ireland,France,4044668
+2023-03-27,Netherlands,Gibraltar,5.11,0.0,3 - 0,Netherlands,Gibraltar,4044667
+2023-03-27,Moldova,Czechia,0.26,1.53,0 - 0,Moldova,Czech Republic,4044721
+2023-03-27,Poland,Albania,0.89,0.46,1 - 0,Poland,Albania,4044720
+2023-03-27,Austria,Estonia,3.24,0.58,2 - 1,Austria,Estonia,4044761
+2023-03-27,Sweden,Azerbaijan,2.65,0.39,5 - 0,Sweden,Azerbaijan,4044760
+2023-03-27,Montenegro,Serbia,0.48,0.79,0 - 2,Montenegro,Serbia,4044741
+2023-03-28,Georgia,Norway,1.05,1.97,1 - 1,Georgia,Norway,4044571
+2023-03-28,Scotland,Spain,0.88,0.79,2 - 0,Scotland,Spain,4044558
+2023-03-28,Turkiye,Croatia,1.15,1.69,0 - 2,Turkey,Croatia,4044700
+2023-03-28,Wales,Latvia,0.99,0.54,1 - 0,Wales,Latvia,4044701
+2023-03-28,Switzerland,Israel,2.94,0.12,3 - 0,Switzerland,Israel,4044639
+2023-06-14,Netherlands,Croatia,1.62,3.26,2 - 4,Netherlands,Croatia,4109689
+2023-06-15,Spain,Italy,2.73,1.81,2 - 1,Spain,Italy,4109688
+2023-06-16,Gibraltar,France,0.06,3.8,0 - 3,Gibraltar,France,4044669
+2023-06-16,Malta,England,0.0,2.83,0 - 4,Malta,England,4044682
+2023-06-16,Latvia,Türkiye,2.69,2.34,2 - 3,Latvia,Turkey,4044703
+2023-06-16,Wales,Armenia,2.39,1.07,2 - 4,Wales,Armenia,4044702
+2023-06-16,Denmark,Northern Ireland,1.04,0.32,1 - 0,Denmark,Northern Ireland,4044784
+2023-06-16,Andorra,Switzerland,0.29,3.16,1 - 2,Andorra,Switzerland,4044642
+2023-06-17,Norway,Scotland,1.69,0.54,1 - 2,Norway,Scotland,4044559
+2023-06-17,Faroe Islands,Czechia,0.0,1.57,0 - 3,Faroe Islands,Czech Republic,4044723
+2023-06-17,Belgium,Austria,1.1,0.68,1 - 1,Belgium,Austria,4044763
+2023-06-17,Portugal,Bosnia and Herzegovina,1.97,0.47,3 - 0,Portugal,Bosnia and Herzegovina,4044585
+2023-06-18,Netherlands,Italy,1.67,1.74,2 - 3,Netherlands,Italy,4109690
+2023-06-18,Croatia,Spain,0.82,1.34,0 - 0,Croatia,Spain,4109691
+2023-06-19,France,Greece,2.4,0.21,1 - 0,France,Greece,4044614
+2023-06-19,England,North Macedonia,4.21,0.0,7 - 0,England,North Macedonia,4044684
+2023-06-19,Türkiye,Wales,1.75,0.17,2 - 0,Turkey,Wales,4044705
+2023-06-19,Slovenia,Denmark,0.38,1.68,1 - 1,Slovenia,Denmark,4044789
+2023-06-19,Switzerland,Romania,2.9,0.7,2 - 2,Switzerland,Romania,4044643
+2023-06-20,Norway,Cyprus,3.34,0.43,3 - 1,Norway,Cyprus,4044572
+2023-06-20,Scotland,Georgia,1.06,1.12,2 - 0,Scotland,Georgia,4044560
+2023-06-20,Moldova,Poland,0.51,2.18,3 - 2,Moldova,Poland,4044724
+2023-06-20,Austria,Sweden,1.83,0.29,2 - 0,Austria,Sweden,4044764
+2023-06-20,Estonia,Belgium,0.47,1.58,0 - 3,Estonia,Belgium,4044765
+2023-06-20,Bulgaria,Serbia,0.82,0.58,1 - 1,Bulgaria,Serbia,4044745
+2023-06-20,Bosnia and Herzegovina,Luxembourg,1.8,1.72,0 - 2,Bosnia and Herzegovina,Luxembourg,4044586
+2023-06-20,Iceland,Portugal,0.5,0.99,0 - 1,Iceland,Portugal,4044588
+2023-09-07,France,Ireland,1.94,0.54,2 - 0,France,Republic of Ireland,4044671
+2023-09-07,Netherlands,Greece,1.09,0.19,3 - 0,Netherlands,Greece,4044615
+2023-09-07,Czechia,Albania,1.45,0.02,1 - 1,Czech Republic,Albania,4044727
+2023-09-07,Poland,Faroe Islands,1.86,0.12,2 - 0,Poland,Faroe Islands,4044726
+2023-09-07,Serbia,Hungary,1.87,1.54,1 - 2,Serbia,Hungary,4044746
+2023-09-07,Denmark,San Marino,3.23,0.01,4 - 0,Denmark,San Marino,4044791
+2023-09-08,Georgia,Spain,0.27,4.19,1 - 7,Georgia,Spain,4044566
+2023-09-08,Cyprus,Scotland,0.17,1.83,0 - 3,Cyprus,Scotland,4044561
+2023-09-08,Croatia,Latvia,3.84,0.47,5 - 0,Croatia,Latvia,4044706
+2023-09-08,Türkiye,Armenia,2.18,0.81,1 - 1,Turkey,Armenia,4044707
+2023-09-08,Bosnia and Herzegovina,Liechtenstein,1.58,0.12,2 - 1,Bosnia and Herzegovina,Liechtenstein,4044591
+2023-09-08,Slovakia,Portugal,0.95,0.91,0 - 1,Slovakia,Portugal,4044589
+2023-09-09,Ukraine,England,0.75,1.34,1 - 1,Ukraine,England,4044686
+2023-09-09,Azerbaijan,Belgium,0.7,0.81,0 - 1,Azerbaijan,Belgium,4044766
+2023-09-09,Estonia,Sweden,0.64,3.39,0 - 5,Estonia,Sweden,4044767
+2023-09-09,Kosovo,Switzerland,1.27,0.92,2 - 2,Kosovo,Switzerland,4044648
+2023-09-10,Ireland,Netherlands,1.32,1.42,1 - 2,Republic of Ireland,Netherlands,4044672
+2023-09-10,Albania,Poland,0.33,0.39,2 - 0,Albania,Poland,4044729
+2023-09-10,Lithuania,Serbia,0.73,2.58,1 - 3,Lithuania,Serbia,4044749
+2023-09-10,Finland,Denmark,0.13,0.56,0 - 1,Finland,Denmark,4044794
+2023-09-11,Armenia,Croatia,0.21,4.02,0 - 1,Armenia,Croatia,4044708
+2023-09-11,Latvia,Wales,1.51,3.01,0 - 2,Latvia,Wales,4044709
+2023-09-11,Iceland,Bosnia and Herzegovina,1.25,1.75,1 - 0,Iceland,Bosnia and Herzegovina,4044592
+2023-09-11,Portugal,Luxembourg,3.23,0.26,9 - 0,Portugal,Luxembourg,4044594
+2023-09-12,Norway,Georgia,0.84,0.54,2 - 1,Norway,Georgia,4044573
+2023-09-12,Spain,Cyprus,4.39,0.14,6 - 0,Spain,Cyprus,4044567
+2023-09-12,Belgium,Estonia,1.47,0.03,5 - 0,Belgium,Estonia,4044768
+2023-09-12,Sweden,Austria,1.2,1.47,1 - 3,Sweden,Austria,4044769
+2023-09-12,Switzerland,Andorra,2.7,0.0,3 - 0,Switzerland,Andorra,4044651
+2023-10-12,Cyprus,Norway,0.07,2.05,0 - 4,Cyprus,Norway,4044574
+2023-10-12,Spain,Scotland,2.16,1.06,2 - 0,Spain,Scotland,4044562
+2023-10-12,Croatia,Turkiye,1.13,2.65,0 - 1,Croatia,Turkey,4044710
+2023-10-12,Albania,Czechia,1.26,0.88,3 - 0,Albania,Czech Republic,4044730
+2023-10-12,Faroe Islands,Poland,0.05,1.52,0 - 2,Faroe Islands,Poland,4044731
+2023-10-13,Netherlands,France,0.68,0.77,1 - 2,Netherlands,France,4044673
+2023-10-13,Austria,Belgium,2.04,1.18,2 - 3,Austria,Belgium,4044770
+2023-10-13,Liechtenstein,Bosnia and Herzegovina,0.04,3.41,0 - 2,Liechtenstein,Bosnia and Herzegovina,4044595
+2023-10-13,Portugal,Slovakia,6.27,0.34,3 - 2,Portugal,Slovakia,4044596
+2023-10-14,Hungary,Serbia,1.12,1.24,2 - 1,Hungary,Serbia,4044751
+2023-10-14,Denmark,Kazakhstan,1.83,0.99,3 - 1,Denmark,Kazakhstan,4044798
+2023-10-15,Norway,Spain,0.41,0.65,0 - 1,Norway,Spain,4044568
+2023-10-15,Turkiye,Latvia,2.3,0.96,4 - 0,Turkey,Latvia,4044712
+2023-10-15,Wales,Croatia,1.0,1.61,2 - 1,Wales,Croatia,4044713
+2023-10-15,Czechia,Faroe Islands,2.76,0.34,1 - 0,Czech Republic,Faroe Islands,4044732
+2023-10-15,Poland,Moldova,2.44,0.33,1 - 1,Poland,Moldova,4044733
+2023-10-15,Switzerland,Belarus,3.2,1.09,3 - 3,Switzerland,Belarus,4044655
+2023-10-16,Greece,Netherlands,0.33,2.05,0 - 1,Greece,Netherlands,4044618
+2023-10-16,Azerbaijan,Austria,0.82,2.07,0 - 1,Azerbaijan,Austria,4044772
+2023-10-16,Belgium,Sweden,1.41,1.11,1 - 1,Belgium,Sweden,4044773
+2023-10-16,Bosnia and Herzegovina,Portugal,0.21,3.24,0 - 5,Bosnia and Herzegovina,Portugal,4044600
+2023-10-17,England,Italy,1.92,1.63,3 - 1,England,Italy,4044692
+2023-10-17,Serbia,Montenegro,2.11,0.35,3 - 1,Serbia,Montenegro,4044752
+2023-10-17,San Marino,Denmark,0.18,0.93,1 - 2,San Marino,Denmark,4044801
+2023-11-15,Israel,Switzerland,0.49,1.78,1 - 1,Israel,Switzerland,4044654
+2023-11-16,Cyprus,Spain,0.52,2.05,1 - 3,Cyprus,Spain,4044569
+2023-11-16,Georgia,Scotland,0.53,0.79,2 - 2,Georgia,Scotland,4044563
+2023-11-16,Azerbaijan,Sweden,0.93,1.81,3 - 0,Azerbaijan,Sweden,4044775
+2023-11-16,Estonia,Austria,0.9,1.87,0 - 2,Estonia,Austria,4044774
+2023-11-16,Liechtenstein,Portugal,0.34,2.26,0 - 2,Liechtenstein,Portugal,4044601
+2023-11-16,Luxembourg,Bosnia and Herzegovina,1.44,0.81,4 - 1,Luxembourg,Bosnia and Herzegovina,4044602
+2023-11-17,England,Malta,0.94,0.16,2 - 0,England,Malta,4044695
+2023-11-17,Poland,Czechia,1.57,1.26,1 - 1,Poland,Czech Republic,4044734
+2023-11-17,Denmark,Slovenia,2.04,0.08,2 - 1,Denmark,Slovenia,4044804
+2023-11-18,France,Gibraltar,6.98,0.0,14 - 0,France,Gibraltar,4044675
+2023-11-18,Netherlands,Ireland,1.68,0.12,1 - 0,Netherlands,Republic of Ireland,4044676
+2023-11-18,Armenia,Wales,1.27,0.69,1 - 1,Armenia,Wales,4044714
+2023-11-18,Latvia,Croatia,0.02,1.95,0 - 2,Latvia,Croatia,4044715
+2023-11-18,Switzerland,Kosovo,1.65,0.56,1 - 1,Switzerland,Kosovo,4044660
+2023-11-19,Scotland,Norway,1.21,2.2,3 - 3,Scotland,Norway,4044564
+2023-11-19,Spain,Georgia,1.97,0.53,3 - 1,Spain,Georgia,4044570
+2023-11-19,Belgium,Azerbaijan,2.46,0.09,5 - 0,Belgium,Azerbaijan,4044776
+2023-11-19,Sweden,Estonia,2.64,0.05,2 - 0,Sweden,Estonia,4044777
+2023-11-19,Serbia,Bulgaria,1.57,0.33,2 - 2,Serbia,Bulgaria,4044757
+2023-11-19,Bosnia and Herzegovina,Slovakia,0.25,1.29,1 - 2,Bosnia and Herzegovina,Slovakia,4044605
+2023-11-19,Portugal,Iceland,2.1,0.45,2 - 0,Portugal,Iceland,4044606
+2023-11-20,North Macedonia,England,1.05,1.26,1 - 1,North Macedonia,England,4044697
+2023-11-20,Czechia,Moldova,1.97,0.38,3 - 0,Czech Republic,Moldova,4044736
+2023-11-20,Northern Ireland,Denmark,0.91,1.09,2 - 0,Northern Ireland,Denmark,4044805
+2023-11-21,Gibraltar,Netherlands,0.0,2.51,0 - 6,Gibraltar,Netherlands,4044677
+2023-11-21,Greece,France,0.44,1.67,2 - 2,Greece,France,4044619
+2023-11-21,Croatia,Armenia,1.2,0.27,1 - 0,Croatia,Armenia,4044716
+2023-11-21,Wales,Turkiye,0.57,1.3,1 - 1,Wales,Turkey,4044717
+2023-11-21,Romania,Switzerland,0.88,1.24,1 - 0,Romania,Switzerland,4044661
+2024-01-13,Ivory Coast,Guinea-Bissau,0.85,0.34,2 - 0,Ivory Coast,Guinea-Bissau,4346221
+2024-01-14,Egypt,Mozambique,2.0,0.81,2 - 2,Egypt,Mozambique,4346225
+2024-01-14,Ghana,Cape Verde,1.74,2.99,1 - 2,Ghana,Cape Verde,4346226
+2024-01-15,Senegal,Gambia,1.88,1.0,3 - 0,Senegal,Gambia,4346229
+2024-01-15,Cameroon,Guinea,0.7,0.28,1 - 1,Cameroon,Guinea,4346230
+2024-01-15,Algeria,Angola,0.86,1.65,1 - 1,Algeria,Angola,4346209
+2024-01-16,Tunisia,Namibia,0.69,1.76,0 - 1,Tunisia,Namibia,4346242
+2024-01-16,Mali,South Africa,2.1,1.32,2 - 0,Mali,South Africa,4346241
+2024-01-17,Morocco,Tanzania,2.53,0.03,3 - 0,Morocco,Tanzania,4346240
+2024-01-17,DR Congo,Zambia,2.54,0.2,1 - 1,DR Congo,Zambia,4346239
+2024-01-18,Ivory Coast,Nigeria,0.57,1.72,0 - 1,Ivory Coast,Nigeria,4346208
+2024-01-18,Egypt,Ghana,1.31,0.31,2 - 2,Egypt,Ghana,4346224
+2024-01-19,Cape Verde,Mozambique,0.79,0.62,3 - 0,Cape Verde,Mozambique,4346227
+2024-01-19,Senegal,Cameroon,1.17,0.37,3 - 1,Senegal,Cameroon,4346228
+2024-01-20,Algeria,Burkina Faso,1.75,1.36,2 - 2,Algeria,Burkina Faso,4346219
+2024-01-20,Tunisia,Mali,0.52,1.1,1 - 1,Tunisia,Mali,4346232
+2024-01-21,Morocco,DR Congo,1.09,1.87,1 - 1,Morocco,DR Congo,4346235
+2024-01-21,South Africa,Namibia,2.3,0.36,4 - 0,South Africa,Namibia,4346236
+2024-01-22,Equatorial Guinea,Ivory Coast,1.39,2.06,4 - 0,Equatorial Guinea,Ivory Coast,4346212
+2024-01-22,Cape Verde,Egypt,0.65,1.65,2 - 2,Cape Verde,Egypt,4346214
+2024-01-22,Mozambique,Ghana,1.16,1.79,2 - 2,Mozambique,Ghana,4346215
+2024-01-23,Gambia,Cameroon,1.52,1.72,2 - 3,Gambia,Cameroon,4346217
+2024-01-23,Guinea,Senegal,0.52,1.44,0 - 2,Guinea,Senegal,4346216
+2024-01-23,Mauritania,Algeria,1.25,1.64,1 - 0,Mauritania,Algeria,4346218
+2024-01-24,South Africa,Tunisia,0.64,1.0,0 - 0,South Africa,Tunisia,4346238
+2024-01-24,Tanzania,DR Congo,0.11,0.6,0 - 0,Tanzania,DR Congo,4346233
+2024-01-24,Zambia,Morocco,0.45,2.61,0 - 1,Zambia,Morocco,4346234
+2024-01-27,Nigeria,Cameroon,1.38,0.28,2 - 0,Nigeria,Cameroon,4353229
+2024-01-28,Egypt,DR Congo,1.49,1.63,1 - 1,Egypt,DR Congo,4353231
+2024-01-29,Cape Verde,Mauritania,1.64,0.82,1 - 0,Cape Verde,Mauritania,4353232
+2024-01-29,Senegal,Ivory Coast,0.9,1.3,1 - 1,Senegal,Ivory Coast,4353233
+2024-01-30,Morocco,South Africa,1.94,0.32,0 - 2,Morocco,South Africa,4353235
+2024-02-02,DR Congo,Guinea,1.88,1.09,3 - 1,DR Congo,Guinea,4353242
+2024-02-03,Mali,Ivory Coast,1.36,0.81,1 - 2,Mali,Ivory Coast,4353243
+2024-02-03,Cape Verde,South Africa,1.75,1.26,0 - 0,Cape Verde,South Africa,4353244
+2024-02-07,Nigeria,South Africa,1.49,1.67,1 - 1,Nigeria,South Africa,4353245
+2024-02-07,Ivory Coast,DR Congo,1.21,0.93,1 - 0,Ivory Coast,DR Congo,4353246
+2024-02-10,South Africa,DR Congo,0.44,1.65,0 - 0,South Africa,DR Congo,4353247
+2024-02-11,Nigeria,Ivory Coast,0.29,1.45,1 - 2,Nigeria,Ivory Coast,4353248
+2024-03-21,Poland,Estonia,2.76,0.08,5 - 1,Poland,Estonia,4369679
+2024-03-21,Wales,Finland,3.07,1.45,4 - 1,Wales,Finland,4369678
+2024-03-21,Bosnia and Herzegovina,Ukraine,0.89,1.59,1 - 2,Bosnia and Herzegovina,Ukraine,4369676
+2024-03-26,Wales,Poland,0.85,0.62,0 - 0,Wales,Poland,4369680
+2024-06-14,Germany,Scotland,2.15,0.02,5 - 1,Germany,Scotland,4043837
+2024-06-15,Hungary,Switzerland,1.25,2.33,1 - 3,Hungary,Switzerland,4043838
+2024-06-15,Spain,Croatia,2.01,2.38,3 - 0,Spain,Croatia,4043843
+2024-06-16,Poland,Netherlands,1.32,1.46,1 - 2,Poland,Netherlands,4043855
+2024-06-16,Slovenia,Denmark,1.1,1.66,1 - 1,Slovenia,Denmark,4043850
+2024-06-16,Serbia,England,0.18,0.52,0 - 1,Serbia,England,4043849
+2024-06-17,Belgium,Slovakia,1.7,0.57,0 - 1,Belgium,Slovakia,4043861
+2024-06-17,Austria,France,0.76,2.13,0 - 1,Austria,France,4043856
+2024-06-18,Turkiye,Georgia,3.01,1.37,3 - 1,Turkey,Georgia,4043868
+2024-06-18,Portugal,Czechia,1.85,0.43,2 - 1,Portugal,Czech Republic,4043867
+2024-06-19,Croatia,Albania,2.68,1.46,2 - 2,Croatia,Albania,4043845
+2024-06-19,Germany,Hungary,1.4,1.18,2 - 0,Germany,Hungary,4043840
+2024-06-19,Scotland,Switzerland,0.76,1.13,1 - 1,Scotland,Switzerland,4043839
+2024-06-20,Slovenia,Serbia,1.37,1.64,1 - 1,Slovenia,Serbia,4043852
+2024-06-20,Denmark,England,0.82,0.87,1 - 1,Denmark,England,4043851
+2024-06-20,Spain,Italy,2.02,0.16,1 - 0,Spain,Italy,4043846
+2024-06-21,Poland,Austria,1.68,2.13,1 - 3,Poland,Austria,4043857
+2024-06-21,Netherlands,France,0.47,1.43,0 - 0,Netherlands,France,4043858
+2024-06-21,Argentina,Canada,3.02,1.16,2 - 0,Argentina,Canada,4407860
+2024-06-22,Georgia,Czechia,1.11,3.07,1 - 1,Georgia,Czech Republic,4043869
+2024-06-22,Turkiye,Portugal,0.72,1.86,0 - 3,Turkey,Portugal,4043870
+2024-06-22,Belgium,Romania,1.76,0.94,2 - 0,Belgium,Romania,4043864
+2024-06-22,Ecuador,Venezuela,0.86,1.69,1 - 2,Ecuador,Venezuela,4377176
+2024-06-23,Scotland,Hungary,0.17,1.22,0 - 1,Scotland,Hungary,4043842
+2024-06-23,Switzerland,Germany,0.6,1.56,1 - 1,Switzerland,Germany,4043841
+2024-06-23,Mexico,Jamaica,0.97,0.51,1 - 0,Mexico,Jamaica,4377175
+2024-06-23,USA,Bolivia,2.51,0.18,2 - 0,United States,Bolivia,4377205
+2024-06-24,Albania,Spain,0.48,1.51,0 - 1,Albania,Spain,4043848
+2024-06-24,Croatia,Italy,1.49,0.9,1 - 1,Croatia,Italy,4043847
+2024-06-24,Uruguay,Panama,1.55,0.56,3 - 1,Uruguay,Panama,4377204
+2024-06-24,Colombia,Paraguay,0.71,0.81,2 - 1,Colombia,Paraguay,4377210
+2024-06-25,France,Poland,2.32,1.16,1 - 1,France,Poland,4043860
+2024-06-25,Netherlands,Austria,1.73,0.95,2 - 3,Netherlands,Austria,4043859
+2024-06-25,Denmark,Serbia,0.67,0.29,0 - 0,Denmark,Serbia,4043854
+2024-06-25,England,Slovenia,0.8,0.15,0 - 0,England,Slovenia,4043853
+2024-06-25,Brazil,Costa Rica,1.71,0.03,0 - 0,Brazil,Costa Rica,4407876
+2024-06-25,Peru,Canada,0.81,1.78,0 - 1,Peru,Canada,4407861
+2024-06-26,Ukraine,Belgium,0.82,0.88,0 - 0,Ukraine,Belgium,4043866
+2024-06-26,Czechia,Turkiye,1.62,1.46,1 - 2,Czech Republic,Turkey,4043872
+2024-06-26,Georgia,Portugal,1.65,2.04,2 - 0,Georgia,Portugal,4043871
+2024-06-26,Chile,Argentina,0.12,2.72,0 - 1,Chile,Argentina,4377171
+2024-06-26,Ecuador,Jamaica,2.45,0.81,3 - 1,Ecuador,Jamaica,4377177
+2024-06-27,Venezuela,Mexico,1.17,2.88,1 - 0,Venezuela,Mexico,4377178
+2024-06-27,Panama,USA,0.77,1.08,2 - 1,Panama,United States,4377207
+2024-06-28,Uruguay,Bolivia,2.93,0.06,5 - 0,Uruguay,Bolivia,4377206
+2024-06-28,Colombia,Costa Rica,2.9,0.15,3 - 0,Colombia,Costa Rica,4407877
+2024-06-29,Switzerland,Italy,1.25,0.73,2 - 0,Switzerland,Italy,4043971
+2024-06-29,Germany,Denmark,2.58,1.18,2 - 0,Germany,Denmark,4043970
+2024-06-29,Paraguay,Brazil,0.87,3.74,1 - 4,Paraguay,Brazil,4377211
+2024-06-30,England,Slovakia,1.52,2.15,2 - 1,England,Slovakia,4043973
+2024-06-30,Spain,Georgia,3.36,0.25,4 - 1,Spain,Georgia,4043972
+2024-06-30,Argentina,Peru,2.29,0.14,2 - 0,Argentina,Peru,4377172
+2024-06-30,Canada,Chile,1.08,0.54,0 - 0,Canada,Chile,4407862
+2024-07-01,France,Belgium,1.06,0.23,1 - 0,France,Belgium,4043975
+2024-07-01,Portugal,Slovenia,1.97,0.6,0 - 0,Portugal,Slovenia,4043974
+2024-07-01,Mexico,Ecuador,1.01,0.4,0 - 0,Mexico,Ecuador,4377180
+2024-07-02,Romania,Netherlands,0.28,2.93,0 - 3,Romania,Netherlands,4043976
+2024-07-02,Austria,Turkiye,3.14,0.92,1 - 2,Austria,Turkey,4043977
+2024-07-02,Bolivia,Panama,0.72,1.23,1 - 3,Bolivia,Panama,4377208
+2024-07-02,USA,Uruguay,0.49,1.53,0 - 1,United States,Uruguay,4377209
+2024-07-05,Spain,Germany,1.41,2.15,2 - 1,Spain,Germany,4043979
+2024-07-05,Portugal,France,1.84,1.14,0 - 0,Portugal,France,4043980
+2024-07-05,Argentina,Ecuador,0.87,1.73,1 - 1,Argentina,Ecuador,4407868
+2024-07-06,England,Switzerland,0.65,1.47,1 - 1,England,Switzerland,4043982
+2024-07-06,Netherlands,Turkiye,1.09,1.31,2 - 1,Netherlands,Turkey,4043981
+2024-07-06,Venezuela,Canada,0.86,1.65,1 - 1,Venezuela,Canada,4407869
+2024-07-06,Colombia,Panama,2.25,0.52,5 - 0,Colombia,Panama,4407871
+2024-07-09,Spain,France,0.75,1.1,2 - 1,Spain,France,4043983
+2024-07-10,Netherlands,England,0.54,1.25,1 - 2,Netherlands,England,4043984
+2024-07-10,Argentina,Canada,2.2,0.78,2 - 0,Argentina,Canada,4407872
+2024-07-14,Spain,England,1.95,0.53,2 - 1,Spain,England,4043985
+2024-07-14,Canada,Uruguay,1.9,1.59,2 - 2,Canada,Uruguay,4407874
+2024-09-05,Portugal,Croatia,1.23,0.81,2 - 1,Portugal,Croatia,4421964
+2024-09-05,Scotland,Poland,0.95,1.86,2 - 3,Scotland,Poland,4421965
+2024-09-05,Denmark,Switzerland,1.5,0.44,2 - 0,Denmark,Switzerland,4422025
+2024-09-05,Serbia,Spain,1.24,1.39,0 - 0,Serbia,Spain,4422026
+2024-09-05,Azerbaijan,Sweden,3.88,4.04,1 - 3,Azerbaijan,Sweden,4422001
+2024-09-06,Belgium,Israel,3.61,0.59,3 - 1,Belgium,Israel,4421977
+2024-09-06,France,Italy,1.05,1.74,1 - 3,France,Italy,4421978
+2024-09-06,Kazakhstan,Norway,0.21,1.57,0 - 0,Kazakhstan,Norway,4422043
+2024-09-06,Slovenia,Austria,1.16,0.92,1 - 1,Slovenia,Austria,4422044
+2024-09-06,Wales,Turkiye,2.49,0.79,0 - 0,Wales,Turkey,4422069
+2024-09-07,Germany,Hungary,3.71,1.13,5 - 0,Germany,Hungary,4422013
+2024-09-07,Netherlands,Bosnia and Herzegovina,4.09,1.13,5 - 2,Netherlands,Bosnia and Herzegovina,4422014
+2024-09-07,Georgia,Czechia,2.02,0.55,4 - 1,Georgia,Czech Republic,4421952
+2024-09-07,Ireland,England,0.65,2.67,0 - 2,Republic of Ireland,England,4421989
+2024-09-08,Denmark,Serbia,0.9,0.26,2 - 0,Denmark,Serbia,4422027
+2024-09-08,Switzerland,Spain,1.41,2.08,1 - 4,Switzerland,Spain,4422028
+2024-09-08,Croatia,Poland,1.56,1.02,1 - 0,Croatia,Poland,4421966
+2024-09-08,Portugal,Scotland,3.1,0.65,2 - 1,Portugal,Scotland,4421967
+2024-09-08,Sweden,Estonia,3.48,0.95,3 - 0,Sweden,Estonia,4422004
+2024-09-09,France,Belgium,1.77,0.56,2 - 0,France,Belgium,4421979
+2024-09-09,Norway,Austria,0.85,0.85,2 - 1,Norway,Austria,4422045
+2024-09-09,Montenegro,Wales,2.58,1.34,1 - 2,Montenegro,Wales,4422070
+2024-09-09,Turkiye,Iceland,1.62,0.5,3 - 1,Turkey,Iceland,4422071
+2024-09-10,Hungary,Bosnia and Herzegovina,1.39,0.34,0 - 0,Hungary,Bosnia and Herzegovina,4422015
+2024-09-10,Netherlands,Germany,2.33,2.94,2 - 2,Netherlands,Germany,4422016
+2024-09-10,Czechia,Ukraine,2.4,2.19,3 - 2,Czech Republic,Ukraine,4421955
+2024-09-10,England,Finland,1.63,0.09,2 - 0,England,Finland,4421991
+2024-10-10,Israel,France,0.09,1.32,1 - 4,Israel,France,4421981
+2024-10-10,Italy,Belgium,1.84,0.95,2 - 2,Italy,Belgium,4421982
+2024-10-10,England,Greece,0.84,0.74,1 - 2,England,Greece,4421993
+2024-10-10,Austria,Kazakhstan,3.24,0.17,4 - 0,Austria,Kazakhstan,4422047
+2024-10-10,Norway,Slovenia,2.33,0.79,3 - 0,Norway,Slovenia,4422048
+2024-10-11,Bosnia and Herzegovina,Germany,0.45,1.81,1 - 2,Bosnia and Herzegovina,Germany,4422017
+2024-10-11,Hungary,Netherlands,0.42,1.23,1 - 1,Hungary,Netherlands,4422018
+2024-10-11,Czechia,Albania,1.49,0.28,2 - 0,Czech Republic,Albania,4421956
+2024-10-11,Iceland,Wales,1.17,2.4,2 - 2,Iceland,Wales,4422072
+2024-10-11,Turkiye,Montenegro,2.99,0.62,1 - 0,Turkey,Montenegro,4422073
+2024-10-11,Slovakia,Sweden,1.84,2.1,2 - 2,Slovakia,Sweden,4422006
+2024-10-12,Croatia,Scotland,1.25,0.91,2 - 1,Croatia,Scotland,4421968
+2024-10-12,Poland,Portugal,0.89,3.01,1 - 3,Poland,Portugal,4421969
+2024-10-12,Serbia,Switzerland,0.66,1.6,2 - 0,Serbia,Switzerland,4422029
+2024-10-12,Spain,Denmark,1.64,0.1,1 - 0,Spain,Denmark,4422030
+2024-10-13,Austria,Norway,2.28,0.8,5 - 1,Austria,Norway,4422050
+2024-10-13,Finland,England,1.24,1.62,1 - 3,Finland,England,4421995
+2024-10-14,Belgium,France,2.69,1.49,1 - 2,Belgium,France,4421983
+2024-10-14,Bosnia and Herzegovina,Hungary,0.65,1.37,0 - 2,Bosnia and Herzegovina,Hungary,4422019
+2024-10-14,Germany,Netherlands,0.91,0.13,1 - 0,Germany,Netherlands,4422020
+2024-10-14,Ukraine,Czechia,1.55,1.01,1 - 1,Ukraine,Czech Republic,4421959
+2024-10-14,Iceland,Turkiye,1.11,3.03,2 - 4,Iceland,Turkey,4422074
+2024-10-14,Wales,Montenegro,1.7,0.26,1 - 0,Wales,Montenegro,4422075
+2024-10-14,Estonia,Sweden,0.27,2.49,0 - 3,Estonia,Sweden,4422008
+2024-10-15,Poland,Croatia,1.27,1.27,3 - 3,Poland,Croatia,4421970
+2024-10-15,Scotland,Portugal,0.43,1.47,0 - 0,Scotland,Portugal,4421971
+2024-10-15,Spain,Serbia,2.92,0.37,3 - 0,Spain,Serbia,4422031
+2024-10-15,Switzerland,Denmark,2.13,1.15,2 - 2,Switzerland,Denmark,4422032
+2024-11-14,Belgium,Italy,0.52,2.48,0 - 1,Belgium,Italy,4421985
+2024-11-14,France,Israel,2.22,0.05,0 - 0,France,Israel,4421986
+2024-11-14,Kazakhstan,Austria,0.1,2.7,0 - 2,Kazakhstan,Austria,4422051
+2024-11-14,Slovenia,Norway,1.56,1.6,1 - 4,Slovenia,Norway,4422052
+2024-11-14,Greece,England,0.57,1.21,0 - 3,Greece,England,4421997
+2024-11-15,Portugal,Poland,3.19,0.69,5 - 1,Portugal,Poland,4421972
+2024-11-15,Scotland,Croatia,0.88,1.36,1 - 0,Scotland,Croatia,4421973
+2024-11-15,Denmark,Spain,0.59,1.8,1 - 2,Denmark,Spain,4422033
+2024-11-15,Switzerland,Serbia,2.4,1.53,1 - 1,Switzerland,Serbia,4422034
+2024-11-16,Germany,Bosnia and Herzegovina,4.03,0.46,7 - 0,Germany,Bosnia and Herzegovina,4422021
+2024-11-16,Netherlands,Hungary,3.12,1.33,4 - 0,Netherlands,Hungary,4422022
+2024-11-16,Albania,Czechia,0.36,0.4,0 - 0,Albania,Czech Republic,4421961
+2024-11-16,Turkiye,Wales,3.02,0.24,0 - 0,Turkey,Wales,4422077
+2024-11-16,Sweden,Slovakia,2.14,0.48,2 - 1,Sweden,Slovakia,4422010
+2024-11-17,Israel,Belgium,0.85,0.83,1 - 0,Israel,Belgium,4421987
+2024-11-17,Italy,France,0.66,0.39,1 - 3,Italy,France,4421988
+2024-11-17,England,Ireland,3.87,0.04,5 - 0,England,Republic of Ireland,4421999
+2024-11-17,Austria,Slovenia,2.29,0.69,1 - 1,Austria,Slovenia,4422053
+2024-11-17,Norway,Kazakhstan,2.23,0.3,5 - 0,Norway,Kazakhstan,4422054
+2024-11-18,Croatia,Portugal,2.14,1.31,1 - 1,Croatia,Portugal,4421974
+2024-11-18,Poland,Scotland,1.46,1.48,1 - 2,Poland,Scotland,4421975
+2024-11-18,Serbia,Denmark,1.91,0.41,0 - 0,Serbia,Denmark,4422035
+2024-11-18,Spain,Switzerland,3.33,1.45,3 - 2,Spain,Switzerland,4422036
+2024-11-19,Bosnia and Herzegovina,Netherlands,0.54,1.29,1 - 1,Bosnia and Herzegovina,Netherlands,4422023
+2024-11-19,Hungary,Germany,2.01,1.25,1 - 1,Hungary,Germany,4422024
+2024-11-19,Czechia,Georgia,1.63,1.27,2 - 1,Czech Republic,Georgia,4421963
+2024-11-19,Montenegro,Turkiye,0.87,1.63,3 - 1,Montenegro,Turkey,4422078
+2024-11-19,Wales,Iceland,1.68,1.53,4 - 1,Wales,Iceland,4422079
+2024-11-19,Sweden,Azerbaijan,4.48,0.08,6 - 0,Sweden,Azerbaijan,4422012
+2025-03-20,Croatia,France,1.43,1.32,2 - 0,Croatia,France,4679443
+2025-03-20,Denmark,Portugal,2.78,0.51,1 - 0,Denmark,Portugal,4679445
+2025-03-20,Italy,Germany,0.87,1.0,1 - 2,Italy,Germany,4679447
+2025-03-20,Netherlands,Spain,0.61,1.4,2 - 2,Netherlands,Spain,4679441
+2025-03-20,Turkiye,Hungary,0.73,1.31,3 - 1,Turkey,Hungary,4679425
+2025-03-20,Austria,Serbia,1.8,0.36,1 - 1,Austria,Serbia,4679429
+2025-03-20,Greece,Scotland,2.74,1.4,0 - 1,Greece,Scotland,4679431
+2025-03-20,Ukraine,Belgium,2.82,0.59,3 - 1,Ukraine,Belgium,4679427
+2025-03-21,Romania,Bosnia and Herzegovina,1.8,0.95,0 - 1,Romania,Bosnia and Herzegovina,4689298
+2025-03-21,Poland,Lithuania,2.27,0.75,1 - 0,Poland,Lithuania,4689262
+2025-03-21,England,Albania,1.48,0.06,2 - 0,England,Albania,4689384
+2025-03-22,Wales,Kazakhstan,1.96,1.04,3 - 1,Wales,Kazakhstan,4689420
+2025-03-22,Moldova,Norway,0.76,2.95,0 - 5,Moldova,Norway,4689454
+2025-03-22,Czechia,Faroe Islands,2.19,0.38,2 - 1,Czech Republic,Faroe Islands,4689364
+2025-03-23,France,Croatia,3.17,0.18,2 - 0,France,Croatia,4679444
+2025-03-23,Germany,Italy,3.5,1.38,3 - 3,Germany,Italy,4679448
+2025-03-23,Portugal,Denmark,3.33,1.98,5 - 2,Portugal,Denmark,4679446
+2025-03-23,Spain,Netherlands,3.19,2.79,3 - 3,Spain,Netherlands,4679442
+2025-03-23,Hungary,Turkiye,1.73,1.5,0 - 3,Hungary,Turkey,4679426
+2025-03-23,Scotland,Greece,0.98,1.36,0 - 3,Scotland,Greece,4679432
+2025-03-23,Serbia,Austria,1.34,1.1,2 - 0,Serbia,Austria,4679430
+2025-03-23,Belgium,Ukraine,2.65,0.63,3 - 0,Belgium,Ukraine,4679428
+2025-03-24,Poland,Malta,2.91,0.19,2 - 0,Poland,Malta,4689264
+2025-03-24,Bosnia and Herzegovina,Cyprus,1.12,1.39,2 - 1,Bosnia and Herzegovina,Cyprus,4689299
+2025-03-24,England,Latvia,3.57,0.31,3 - 0,England,Latvia,4689401
+2025-03-25,Israel,Norway,0.61,3.96,2 - 4,Israel,Norway,4689456
+2025-03-25,North Macedonia,Wales,0.96,0.85,1 - 1,North Macedonia,Wales,4689422
+2025-03-25,Gibraltar,Czechia,0.01,4.47,0 - 4,Gibraltar,Czech Republic,4689365
+2025-06-04,Germany,Portugal,1.11,2.92,1 - 2,Germany,Portugal,4679451
+2025-06-05,Spain,France,2.91,2.74,5 - 4,Spain,France,4679452
+2025-06-06,Norway,Italy,1.53,0.38,3 - 0,Norway,Italy,4689480
+2025-06-06,North Macedonia,Belgium,1.29,2.11,1 - 1,North Macedonia,Belgium,4689438
+2025-06-06,Wales,Liechtenstein,2.61,0.0,3 - 0,Wales,Liechtenstein,4689439
+2025-06-06,Czechia,Montenegro,1.35,0.67,2 - 0,Czech Republic,Montenegro,4689367
+2025-06-06,Gibraltar,Croatia,0.25,5.81,0 - 7,Gibraltar,Croatia,4689368
+2025-06-07,Bosnia and Herzegovina,San Marino,2.93,0.18,1 - 0,Bosnia and Herzegovina,San Marino,4689301
+2025-06-07,Austria,Romania,1.28,0.71,2 - 1,Austria,Romania,4689302
+2025-06-07,Finland,Netherlands,0.2,2.15,0 - 2,Finland,Netherlands,4689266
+2025-06-07,Andorra,England,0.3,4.0,0 - 1,Andorra,England,4689402
+2025-06-07,Albania,Serbia,1.08,0.53,0 - 0,Albania,Serbia,4689403
+2025-06-08,Germany,France,2.48,2.35,0 - 2,Germany,France,4679453
+2025-06-08,Portugal,Spain,1.0,2.14,2 - 2,Portugal,Spain,4679454
+2025-06-09,Belgium,Wales,2.89,2.25,4 - 3,Belgium,Wales,4689441
+2025-06-09,Estonia,Norway,0.23,2.99,0 - 1,Estonia,Norway,4689481
+2025-06-09,Croatia,Czechia,3.63,1.39,5 - 1,Croatia,Czech Republic,4689370
+2025-06-10,Finland,Poland,2.47,1.51,2 - 1,Finland,Poland,4689267
+2025-06-10,Netherlands,Malta,4.52,0.16,8 - 0,Netherlands,Malta,4689268
+2025-06-10,San Marino,Austria,0.54,4.26,0 - 4,San Marino,Austria,4689304
+2025-06-10,Serbia,Andorra,2.8,0.31,3 - 0,Serbia,Andorra,4689405
+2025-06-15,Mexico,Dominican Republic,1.45,0.74,3 - 2,Mexico,Dominican Republic,4772410
+2025-06-15,USA,Trinidad and Tobago,3.5,0.23,5 - 0,United States,Trinidad and Tobago,4772437
+2025-06-16,Haiti,Saudi Arabia,0.7,1.33,0 - 1,Haiti,Saudi Arabia,4772438
+2025-06-16,Costa Rica,Suriname,2.6,2.37,4 - 3,Costa Rica,Suriname,4772411
+2025-06-16,Panama,Guadeloupe,4.65,1.95,5 - 2,Panama,Guadeloupe,4772431
+2025-06-18,Curacao,El Salvador,0.92,0.17,0 - 0,Curaçao,El Salvador,4772422
+2025-06-18,Canada,Honduras,4.9,0.89,6 - 0,Canada,Honduras,4772423
+2025-06-18,Costa Rica,Dominican Republic,1.65,1.29,2 - 1,Costa Rica,Dominican Republic,4772412
+2025-06-19,Suriname,Mexico,0.18,1.31,0 - 2,Suriname,Mexico,4772413
+2025-06-19,Trinidad and Tobago,Haiti,1.15,1.92,1 - 1,Trinidad and Tobago,Haiti,4772439
+2025-06-20,Saudi Arabia,USA,0.3,0.83,0 - 1,Saudi Arabia,United States,4772440
+2025-06-21,Guatemala,Panama,0.32,1.93,0 - 1,Guatemala,Panama,4772434
+2025-06-21,Curacao,Canada,1.02,0.69,1 - 1,Curaçao,Canada,4772424
+2025-06-22,Saudi Arabia,Trinidad and Tobago,2.19,0.52,1 - 1,Saudi Arabia,Trinidad and Tobago,4772441
+2025-06-22,USA,Haiti,2.69,0.47,2 - 1,United States,Haiti,4772442
+2025-06-24,Panama,Jamaica,2.39,2.09,4 - 1,Panama,Jamaica,4772436
+2025-06-28,Panama,Honduras,2.22,1.18,1 - 1,Panama,Honduras,4772522
+2025-06-29,Mexico,Saudi Arabia,1.41,0.02,2 - 0,Mexico,Saudi Arabia,4772521
+2025-06-29,Canada,Guatemala,1.34,0.85,1 - 1,Canada,Guatemala,4772526
+2025-06-29,USA,Costa Rica,1.87,1.59,2 - 2,United States,Costa Rica,4772520
+2025-07-02,USA,Guatemala,1.69,1.27,2 - 1,United States,Guatemala,4772523
+2025-07-06,USA,Mexico,0.62,1.07,1 - 2,United States,Mexico,4772525
+2025-09-04,Kazakhstan,Wales,0.81,1.34,0 - 1,Kazakhstan,Wales,4689442
+2025-09-04,Liechtenstein,Belgium,0.0,3.13,0 - 6,Liechtenstein,Belgium,4689443
+2025-09-04,Georgia,Turkiye,1.13,0.73,2 - 3,Georgia,Turkey,4689339
+2025-09-04,Bulgaria,Spain,0.1,3.51,0 - 3,Bulgaria,Spain,4689340
+2025-09-04,Netherlands,Poland,1.24,0.3,1 - 1,Netherlands,Poland,4689270
+2025-09-04,Slovakia,Germany,1.28,1.74,2 - 0,Slovakia,Germany,4689250
+2025-09-04,Suriname,Panama,0.72,1.08,0 - 0,Suriname,Panama,4822523
+2025-09-04,Argentina,Venezuela,1.97,0.32,3 - 0,Argentina,Venezuela,4196558
+2025-09-04,Colombia,Bolivia,1.44,0.42,3 - 0,Colombia,Bolivia,4196555
+2025-09-04,Paraguay,Ecuador,0.63,0.25,0 - 0,Paraguay,Ecuador,4196557
+2025-09-04,Uruguay,Peru,2.49,0.46,3 - 0,Uruguay,Peru,4196554
+2025-09-05,Slovenia,Sweden,0.75,1.31,2 - 2,Slovenia,Sweden,4689281
+2025-09-05,Switzerland,Kosovo,1.59,0.53,4 - 0,Switzerland,Kosovo,4689282
+2025-09-05,Denmark,Scotland,1.2,0.62,0 - 0,Denmark,Scotland,4689294
+2025-09-05,Ukraine,France,1.34,2.42,0 - 2,Ukraine,France,4689328
+2025-09-05,Faroe Islands,Croatia,1.05,2.65,0 - 1,Faroe Islands,Croatia,4689371
+2025-09-05,Montenegro,Czechia,1.23,3.25,0 - 2,Montenegro,Czech Republic,4689372
+2025-09-05,Brazil,Chile,4.14,0.07,3 - 0,Brazil,Chile,4196556
+2025-09-06,Latvia,Serbia,0.7,1.39,0 - 1,Latvia,Serbia,4689406
+2025-09-06,England,Andorra,1.94,0.08,2 - 0,England,Andorra,4689407
+2025-09-06,Armenia,Portugal,0.18,6.34,0 - 5,Armenia,Portugal,4689351
+2025-09-06,Austria,Cyprus,2.14,1.25,1 - 0,Austria,Cyprus,4689305
+2025-09-06,San Marino,Bosnia and Herzegovina,0.14,3.61,0 - 6,San Marino,Bosnia and Herzegovina,4689306
+2025-09-06,Trinidad and Tobago,Curacao,0.55,0.19,0 - 0,Trinidad and Tobago,Curaçao,4822535
+2025-09-06,Haiti,Honduras,1.04,1.03,0 - 0,Haiti,Honduras,4822548
+2025-09-06,Nicaragua,Costa Rica,1.01,0.63,1 - 1,Nicaragua,Costa Rica,4822547
+2025-09-07,Turkiye,Spain,0.54,2.76,0 - 6,Turkey,Spain,4689342
+2025-09-07,Lithuania,Netherlands,0.34,1.12,2 - 3,Lithuania,Netherlands,4689271
+2025-09-07,Poland,Finland,2.25,0.26,3 - 1,Poland,Finland,4689272
+2025-09-07,Belgium,Kazakhstan,3.62,0.23,6 - 0,Belgium,Kazakhstan,4689445
+2025-09-07,Germany,Northern Ireland,2.6,0.28,3 - 1,Germany,Northern Ireland,4689252
+2025-09-08,Kosovo,Sweden,1.49,0.95,2 - 0,Kosovo,Sweden,4689283
+2025-09-08,Switzerland,Slovenia,1.0,0.19,3 - 0,Switzerland,Slovenia,4689284
+2025-09-08,Belarus,Scotland,0.33,2.15,0 - 2,Belarus,Scotland,4689295
+2025-09-08,Greece,Denmark,0.17,1.94,0 - 3,Greece,Denmark,4689296
+2025-09-08,Croatia,Montenegro,3.32,0.16,4 - 0,Croatia,Montenegro,4689374
+2025-09-09,France,Iceland,2.99,0.67,2 - 1,France,Iceland,4689330
+2025-09-09,Hungary,Portugal,0.48,2.38,2 - 3,Hungary,Portugal,4689354
+2025-09-09,Bosnia and Herzegovina,Austria,1.92,1.3,1 - 2,Bosnia and Herzegovina,Austria,4689307
+2025-09-09,Norway,Moldova,9.57,0.09,11 - 1,Norway,Moldova,4689486
+2025-09-09,Serbia,England,0.08,4.22,0 - 5,Serbia,England,4689409
+2025-09-09,Panama,Guatemala,1.58,0.94,1 - 1,Panama,Guatemala,4822524
+2025-09-09,Ecuador,Argentina,1.69,0.41,1 - 0,Ecuador,Argentina,4196581
+2025-09-09,Bolivia,Brazil,1.84,0.34,1 - 0,Bolivia,Brazil,4196561
+2025-09-09,Chile,Uruguay,1.62,0.22,0 - 0,Chile,Uruguay,4196562
+2025-09-09,Peru,Paraguay,0.71,0.42,0 - 1,Peru,Paraguay,4196559
+2025-09-09,Venezuela,Colombia,1.21,2.14,3 - 6,Venezuela,Colombia,4196560
+2025-10-09,Malta,Netherlands,0.36,3.4,0 - 4,Malta,Netherlands,4689274
+2025-10-09,Belarus,Denmark,0.33,4.72,0 - 6,Belarus,Denmark,4689317
+2025-10-09,Scotland,Greece,1.3,1.66,3 - 1,Scotland,Greece,4689318
+2025-10-09,Austria,San Marino,5.84,0.46,10 - 0,Austria,San Marino,4689309
+2025-10-09,Cyprus,Bosnia and Herzegovina,2.15,1.5,2 - 2,Cyprus,Bosnia and Herzegovina,4689310
+2025-10-09,Czechia,Croatia,0.64,0.76,0 - 0,Czech Republic,Croatia,4689375
+2025-10-10,Belgium,North Macedonia,3.2,0.06,0 - 0,Belgium,North Macedonia,4689447
+2025-10-10,Germany,Luxembourg,3.85,0.01,4 - 0,Germany,Luxembourg,4689254
+2025-10-10,Sweden,Switzerland,0.9,2.14,0 - 2,Sweden,Switzerland,4689286
+2025-10-10,France,Azerbaijan,2.4,0.04,3 - 0,France,Azerbaijan,4689332
+2025-10-10,Nicaragua,Haiti,0.61,0.96,0 - 3,Nicaragua,Haiti,4822552
+2025-10-10,Honduras,Costa Rica,0.48,0.6,0 - 0,Honduras,Costa Rica,4822551
+2025-10-10,Curacao,Jamaica,0.42,1.3,2 - 0,Curaçao,Jamaica,4822538
+2025-10-11,Serbia,Albania,1.56,0.69,0 - 1,Serbia,Albania,4689411
+2025-10-11,Portugal,Ireland,2.97,0.09,1 - 0,Portugal,Republic of Ireland,4689356
+2025-10-11,Norway,Israel,2.26,0.15,5 - 0,Norway,Israel,4689487
+2025-10-11,Bulgaria,Turkiye,0.41,1.76,1 - 6,Bulgaria,Turkey,4689343
+2025-10-11,Spain,Georgia,3.83,0.0,2 - 0,Spain,Georgia,4689344
+2025-10-11,El Salvador,Panama,1.29,1.09,0 - 1,El Salvador,Panama,4822526
+2025-10-12,Romania,Austria,0.45,0.16,1 - 0,Romania,Austria,4689312
+2025-10-12,Scotland,Belarus,1.22,1.28,2 - 1,Scotland,Belarus,4689319
+2025-10-12,Denmark,Greece,1.23,1.74,3 - 1,Denmark,Greece,4689320
+2025-10-12,Netherlands,Finland,2.51,0.64,4 - 0,Netherlands,Finland,4689276
+2025-10-12,Lithuania,Poland,0.21,1.11,0 - 2,Lithuania,Poland,4689275
+2025-10-12,Faroe Islands,Czechia,0.68,1.67,2 - 1,Faroe Islands,Czech Republic,4689377
+2025-10-12,Croatia,Gibraltar,3.71,0.05,3 - 0,Croatia,Gibraltar,4689378
+2025-10-13,Northern Ireland,Germany,0.6,1.12,0 - 1,Northern Ireland,Germany,4689255
+2025-10-13,Slovenia,Switzerland,0.41,0.63,0 - 0,Slovenia,Switzerland,4689287
+2025-10-13,Sweden,Kosovo,1.14,1.15,0 - 1,Sweden,Kosovo,4689288
+2025-10-13,Iceland,France,1.12,1.96,2 - 2,Iceland,France,4689333
+2025-10-13,Wales,Belgium,0.85,3.09,2 - 4,Wales,Belgium,4689449
+2025-10-14,Spain,Bulgaria,3.96,0.38,4 - 0,Spain,Bulgaria,4689346
+2025-10-14,Turkiye,Georgia,1.95,1.07,4 - 1,Turkey,Georgia,4689345
+2025-10-14,Portugal,Hungary,2.5,1.88,2 - 2,Portugal,Hungary,4689358
+2025-10-14,Andorra,Serbia,0.41,2.26,1 - 3,Andorra,Serbia,4689412
+2025-10-14,Latvia,England,0.41,2.4,0 - 5,Latvia,England,4689413
+2025-10-14,Honduras,Haiti,1.85,0.42,3 - 0,Honduras,Haiti,4822554
+2025-10-14,Costa Rica,Nicaragua,2.51,0.2,4 - 1,Costa Rica,Nicaragua,4822553
+2025-10-14,Curacao,Trinidad and Tobago,0.83,1.86,1 - 1,Curaçao,Trinidad and Tobago,4822541
+2025-11-13,France,Ukraine,3.81,0.04,4 - 0,France,Ukraine,4689336
+2025-11-13,Ireland,Portugal,2.02,1.6,2 - 0,Republic of Ireland,Portugal,4689360
+2025-11-13,Norway,Estonia,2.03,0.7,4 - 1,Norway,Estonia,4689491
+2025-11-13,England,Serbia,1.2,0.39,2 - 0,England,Serbia,4689416
+2025-11-14,Poland,Netherlands,1.57,0.82,1 - 1,Poland,Netherlands,4689278
+2025-11-14,Luxembourg,Germany,0.79,1.65,0 - 2,Luxembourg,Germany,4689257
+2025-11-14,Croatia,Faroe Islands,2.68,0.45,3 - 1,Croatia,Faroe Islands,4689380
+2025-11-14,Bermuda,Curacao,0.14,3.68,0 - 7,Bermuda,Curaçao,4822543
+2025-11-14,Guatemala,Panama,2.87,0.4,2 - 3,Guatemala,Panama,4822530
+2025-11-14,Haiti,Costa Rica,1.33,1.21,1 - 0,Haiti,Costa Rica,4822555
+2025-11-15,Kazakhstan,Belgium,0.34,2.87,1 - 1,Kazakhstan,Belgium,4689450
+2025-11-15,Liechtenstein,Wales,0.28,2.85,0 - 1,Liechtenstein,Wales,4689451
+2025-11-15,Georgia,Spain,0.28,3.52,0 - 4,Georgia,Spain,4689347
+2025-11-15,Turkiye,Bulgaria,2.56,0.39,2 - 0,Turkey,Bulgaria,4689348
+2025-11-15,Cyprus,Austria,0.37,2.51,0 - 2,Cyprus,Austria,4689313
+2025-11-15,Bosnia and Herzegovina,Romania,1.79,1.5,3 - 1,Bosnia and Herzegovina,Romania,4689314
+2025-11-15,Switzerland,Sweden,1.7,0.65,4 - 1,Switzerland,Sweden,4689290
+2025-11-15,Denmark,Belarus,2.88,0.84,2 - 2,Denmark,Belarus,4689322
+2025-11-15,Greece,Scotland,1.93,2.36,3 - 2,Greece,Scotland,4689321
+2025-11-16,Portugal,Armenia,5.69,0.75,9 - 1,Portugal,Armenia,4689362
+2025-11-16,Azerbaijan,France,0.15,2.7,1 - 3,Azerbaijan,France,4689337
+2025-11-16,Albania,England,0.49,1.86,0 - 2,Albania,England,4689417
+2025-11-16,Serbia,Latvia,1.96,1.27,2 - 1,Serbia,Latvia,4689418
+2025-11-16,Italy,Norway,1.31,1.59,1 - 4,Italy,Norway,4689494
+2025-11-17,Germany,Slovakia,4.02,0.38,6 - 0,Germany,Slovakia,4689260
+2025-11-17,Malta,Poland,2.37,1.79,2 - 3,Malta,Poland,4689279
+2025-11-17,Netherlands,Lithuania,3.16,0.67,4 - 0,Netherlands,Lithuania,4689280
+2025-11-17,Czechia,Gibraltar,4.29,0.0,6 - 0,Czech Republic,Gibraltar,4689381
+2025-11-17,Montenegro,Croatia,0.98,2.7,2 - 3,Montenegro,Croatia,4689382
+2025-11-18,Kosovo,Switzerland,0.61,0.91,1 - 1,Kosovo,Switzerland,4689291
+2025-11-18,Sweden,Slovenia,0.64,2.14,1 - 1,Sweden,Slovenia,4689292
+2025-11-18,Scotland,Denmark,1.76,2.2,4 - 2,Scotland,Denmark,4689324
+2025-11-18,Spain,Turkiye,2.58,1.13,2 - 2,Spain,Turkey,4689350
+2025-11-18,Austria,Bosnia and Herzegovina,1.19,0.8,1 - 1,Austria,Bosnia and Herzegovina,4689315
+2025-11-18,Belgium,Liechtenstein,3.08,0.04,7 - 0,Belgium,Liechtenstein,4689452
+2025-11-18,Wales,North Macedonia,3.61,0.63,7 - 1,Wales,North Macedonia,4689453
+2025-12-21,Morocco,Comoros,1.94,0.3,2 - 0,Morocco,Comoros,4721983
+2025-12-22,South Africa,Angola,0.44,0.89,2 - 1,South Africa,Angola,4721990
+2025-12-22,Egypt,Zimbabwe,2.93,0.35,2 - 1,Egypt,Zimbabwe,4721989
+2025-12-23,DR Congo,Benin,1.49,0.49,1 - 0,DR Congo,Benin,4722002
+2025-12-23,Senegal,Botswana,3.66,0.17,3 - 0,Senegal,Botswana,4722001
+2025-12-23,Tunisia,Uganda,1.43,0.55,3 - 1,Tunisia,Uganda,4721996
+2025-12-24,Algeria,Sudan,2.2,0.31,3 - 0,Algeria,Sudan,4722007
+2025-12-24,Ivory Coast,Mozambique,1.3,0.24,1 - 0,Ivory Coast,Mozambique,4722013
+2025-12-24,Cameroon,Gabon,0.97,0.69,1 - 0,Cameroon,Gabon,4722014
+2025-12-26,Egypt,South Africa,1.02,0.75,1 - 0,Egypt,South Africa,4721991
+2025-12-26,Morocco,Mali,2.81,0.91,1 - 1,Morocco,Mali,4721985
+2025-12-27,Senegal,DR Congo,2.01,0.95,1 - 1,Senegal,DR Congo,4722003
+2025-12-27,Nigeria,Tunisia,2.12,1.07,3 - 2,Nigeria,Tunisia,4721997
+2025-12-28,Ivory Coast,Cameroon,0.98,0.62,1 - 1,Ivory Coast,Cameroon,4722015
+2025-12-28,Algeria,Burkina Faso,2.01,1.02,1 - 0,Algeria,Burkina Faso,4722009
+2025-12-29,Angola,Egypt,0.76,0.62,0 - 0,Angola,Egypt,4721993
+2025-12-29,Zimbabwe,South Africa,1.3,1.52,2 - 3,Zimbabwe,South Africa,4721994
+2025-12-29,Zambia,Morocco,0.23,1.96,0 - 3,Zambia,Morocco,4721987
+2025-12-30,Tanzania,Tunisia,0.18,1.0,1 - 1,Tanzania,Tunisia,4722000
+2025-12-30,Benin,Senegal,0.76,1.94,0 - 3,Benin,Senegal,4722005
+2025-12-30,Botswana,DR Congo,0.27,4.02,0 - 3,Botswana,DR Congo,4722006
+2025-12-31,Equatorial Guinea,Algeria,0.49,1.9,1 - 3,Equatorial Guinea,Algeria,4722011
+2025-12-31,Gabon,Ivory Coast,0.87,1.84,2 - 3,Gabon,Ivory Coast,4722017
+2025-12-31,Mozambique,Cameroon,1.07,2.35,1 - 2,Mozambique,Cameroon,4722018
+2026-01-03,Senegal,Sudan,1.49,0.49,3 - 1,Senegal,Sudan,5073456
+2026-01-03,Mali,Tunisia,1.15,1.11,1 - 1,Mali,Tunisia,5073457
+2026-01-04,Morocco,Tanzania,1.01,0.73,1 - 0,Morocco,Tanzania,5073458
+2026-01-04,South Africa,Cameroon,2.08,1.36,1 - 2,South Africa,Cameroon,5073459
+2026-01-05,Egypt,Benin,1.19,1.22,3 - 1,Egypt,Benin,5073460
+2026-01-06,Algeria,DR Congo,0.7,0.16,1 - 0,Algeria,DR Congo,5073462
+2026-01-06,Ivory Coast,Burkina Faso,2.02,0.41,3 - 0,Ivory Coast,Burkina Faso,5073463
+2026-01-09,Mali,Senegal,1.12,1.88,0 - 1,Mali,Senegal,5073471
+2026-01-09,Cameroon,Morocco,0.46,1.43,0 - 2,Cameroon,Morocco,5073472
+2026-01-10,Algeria,Nigeria,0.13,3.36,0 - 2,Algeria,Nigeria,5073473
+2026-01-10,Egypt,Ivory Coast,0.78,1.17,3 - 2,Egypt,Ivory Coast,5073474
+2026-01-14,Senegal,Egypt,0.33,0.12,1 - 0,Senegal,Egypt,5073475
+2026-01-14,Nigeria,Morocco,0.08,0.86,0 - 0,Nigeria,Morocco,5073476
+2026-01-17,Egypt,Nigeria,0.29,0.2,0 - 0,Egypt,Nigeria,5073477
+2026-01-18,Senegal,Morocco,1.71,2.18,0 - 3,Senegal,Morocco,5073478
+2026-03-26,Turkiye,Romania,1.4,0.48,1 - 0,Turkey,Romania,5067289
+2026-03-26,Czechia,Ireland,1.45,1.28,2 - 2,Czech Republic,Republic of Ireland,5067294
+2026-03-26,Denmark,North Macedonia,2.85,0.15,4 - 0,Denmark,North Macedonia,5067290
+2026-03-26,Poland,Albania,0.89,1.11,2 - 1,Poland,Albania,5067292
+2026-03-26,Ukraine,Sweden,0.76,2.39,1 - 3,Ukraine,Sweden,5067288
+2026-03-26,Wales,Bosnia and Herzegovina,1.34,1.1,1 - 1,Wales,Bosnia and Herzegovina,5067291
+2026-03-31,Bosnia and Herzegovina,Italy,1.9,0.86,1 - 1,Bosnia and Herzegovina,Italy,5067299
+2026-03-31,Czechia,Denmark,1.22,1.35,2 - 2,Czech Republic,Denmark,5067302
+2026-03-31,Kosovo,Turkiye,0.88,1.76,0 - 1,Kosovo,Turkey,5067301
+2026-03-31,Sweden,Poland,1.65,1.53,3 - 2,Sweden,Poland,5067300
