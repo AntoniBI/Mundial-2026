@@ -10,7 +10,11 @@ título, tendencias diarias y marcador de aciertos del modelo.
 4 veces al día (09:23, 12:41, 16:17 y 22:53 hora española) — descarga los
 resultados y el xG del día, reentrena el modelo, simula 10.000 torneos con
 los partidos reales fijados y publica el visor. Sin intervención manual.
-Plan B local: `publish.bat`.
+**Actions es la única fuente de verdad de los datos publicados**: el
+entrenamiento XGBoost no es reproducible bit a bit entre máquinas, así que
+los CSV de salida y `docs/index.html` solo los escribe y commitea el
+workflow (los runs locales no los tocan). Para forzar una actualización
+fuera de horario: `publish.bat` (lanza el workflow en remoto vía `gh`).
 
 ---
 
@@ -187,12 +191,14 @@ python -m src.run_update --sims 20000     # más iteraciones
 python -m src.run_update --no-download    # sin re-descargar datos
 ```
 
-Ejecútalo cada mañana durante el Mundial: fija los partidos ya jugados con
-su resultado real (grupos, eliminatorias y penaltis vía `shootouts.csv`),
-reentrena con el histórico hasta hoy y simula 10.000 veces **solo lo que
-queda de torneo**. Guarda `outputs/wc26_stage_probabilities_live_<fecha>.csv`
-(histórico diario) y `..._latest.csv`, y muestra los mayores movimientos en
-probabilidad de título respecto a la predicción pre-torneo.
+Es lo que ejecuta GitHub Actions 4 veces al día: fija los partidos ya
+jugados con su resultado real (grupos, eliminatorias y penaltis vía
+`shootouts.csv`), reentrena con el histórico hasta hoy y simula 10.000
+veces **solo lo que queda de torneo**. En Actions guarda
+`outputs/wc26_stage_probabilities_live_<fecha>.csv` (histórico diario) y
+`..._latest.csv`; en local solo imprime los resultados (los CSV publicados
+no se escriben para no pisar los de la web) y muestra los mayores
+movimientos en probabilidad de título respecto a la predicción pre-torneo.
 
 ## Limitaciones conocidas / siguientes pasos
 

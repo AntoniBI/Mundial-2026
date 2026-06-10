@@ -14,6 +14,7 @@ fijados), igual que run_update. Uso:
     python -m src.run_viewer [--sims 10000]
 """
 import json
+import os
 import sys
 from datetime import date, timedelta
 
@@ -268,7 +269,11 @@ def update_prediction_log(lam_tab, lam_late, groups, rho, today: str) -> pd.Data
     if log_path.exists():
         log = pd.concat([pd.read_csv(log_path), log], ignore_index=True)
     log = log.drop_duplicates(["gen_date", "t1", "t2"], keep="last")
-    log.to_csv(log_path, index=False, encoding="utf-8")
+    # El log publicado lo escribe SOLO GitHub Actions: el entrenamiento
+    # XGBoost no es reproducible bit a bit entre máquinas, y un run local
+    # pisaría las predicciones ya publicadas en la web.
+    if os.environ.get("GITHUB_ACTIONS"):
+        log.to_csv(log_path, index=False, encoding="utf-8")
     return log
 
 

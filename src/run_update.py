@@ -16,6 +16,7 @@ y comparación con la predicción pre-torneo.
 
 Uso: python -m src.run_update [--no-download] [--sims 10000]
 """
+import os
 import sys
 from datetime import date, timedelta
 
@@ -105,8 +106,14 @@ def main():
                           played_group=played_group, ko_winners=ko_winners)
 
     stamp = date.today().isoformat()
-    table.to_csv(OUTPUTS / f"wc26_stage_probabilities_live_{stamp}.csv", encoding="utf-8")
-    table.to_csv(OUTPUTS / "wc26_stage_probabilities_latest.csv", encoding="utf-8")
+    # Los CSV publicados los escribe SOLO GitHub Actions (fuente de verdad):
+    # el entrenamiento no es reproducible bit a bit entre máquinas y un run
+    # local pisaría los valores de la web.
+    if os.environ.get("GITHUB_ACTIONS"):
+        table.to_csv(OUTPUTS / f"wc26_stage_probabilities_live_{stamp}.csv", encoding="utf-8")
+        table.to_csv(OUTPUTS / "wc26_stage_probabilities_latest.csv", encoding="utf-8")
+    else:
+        print("(run local: los CSV publicados no se escriben; los genera GitHub Actions)")
 
     print(f"\n%% de alcanzar cada fase a fecha {stamp} (top 15):")
     print(table.head(15).to_string())

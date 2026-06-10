@@ -1,3 +1,7 @@
 
 # capturas de pantalla temporales
 outputs/*.png
+
+# artefacto local de previsualización; la web publicada es docs/index.html,
+# que genera y commitea SOLO GitHub Actions
+outputs/wc26_viewer.html
