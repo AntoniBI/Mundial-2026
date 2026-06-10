@@ -60,6 +60,9 @@
   .hero .byline::before { content: ""; width: 34px; height: 3px; border-radius: 2px;
           background: linear-gradient(90deg, var(--red26), var(--green26), var(--blue26)); }
   .hero .byline strong { color: var(--navy); font-weight: 800; }
+  .hero .byline .author { text-decoration: none; border-bottom: 2px solid var(--lightblue); }
+  .hero .byline .author:hover { border-bottom-color: var(--red26); }
+  .hero .byline .author:hover strong { color: var(--lightblue); }
   .hero .how { margin-top: 8px; color: var(--dim); font-size: 12.5px;
                line-height: 1.55; max-width: 760px; }
   .hero .hosts { color: var(--lightblue); font-size: 13.5px; margin-top: 12px;
@@ -358,7 +361,7 @@
     <span class="n26">26</span>
     <h1>Copa Mundial de la FIFA 26™</h1>
   </div>
-  <div class="byline">Predicciones diseñadas por <strong>Antoni</strong></div>
+  <div class="byline">Predicciones diseñadas por <a class="author" href="https://github.com/AntoniBI" target="_blank" rel="noopener"><strong>Antoni</strong></a></div>
   <div class="how">
     Modelo de goles esperados entrenado con 64.000 partidos de selecciones desde 1990:
     fuerza Elo en la fecha, forma reciente medida en xG, valor de plantilla y ventaja de anfitrión.<br>
