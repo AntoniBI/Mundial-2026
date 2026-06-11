@@ -7,7 +7,7 @@ cuadro final con marcadores predichos (incluido el 3er puesto), camino al
 título, tendencias diarias y marcador de aciertos del modelo.
 
 **Actualización automática**: GitHub Actions ejecuta el pipeline completo
-4 veces al día (09:23, 12:41, 16:17 y 22:53 hora española) — descarga los
+4 veces al día (06:30, 12:41, 16:17 y 22:53 hora española) — descarga los
 resultados y el xG del día, reentrena el modelo, simula 10.000 torneos con
 los partidos reales fijados y publica el visor. Sin intervención manual.
 **Actions es la única fuente de verdad de los datos publicados**: el
