@@ -6,7 +6,8 @@ on:
     # en GitHub Actions y los crons pueden retrasarse o saltarse.
     # Cuatro pasadas al día que actúan de fallback entre sí: si una falla
     # (red caída, fuente no disponible), la siguiente la cubre.
-    - cron: "30 4 * * *"    # 06:30 España — primera pasada del día
+    - cron: "23 4 * * *"    # 06:23 España — primera pasada del día
+    - cron: "23 7 * * *"    # 09:23 España — recoge los partidos de la noche
     - cron: "41 10 * * *"   # 12:41 — fallback de media mañana
     - cron: "17 14 * * *"   # 16:17 — fallback de tarde
     - cron: "53 20 * * *"   # 22:53 — última pasada del día
