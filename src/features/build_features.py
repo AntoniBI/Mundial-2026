@@ -110,13 +110,14 @@ def add_xg(long: pd.DataFrame) -> pd.DataFrame:
 
 
 def add_minutes(long: pd.DataFrame) -> pd.DataFrame:
-    """Duración real del partido para el ajuste de exposición Poisson.
+    """Duración real del partido (columna informativa, NO usada al entrenar).
 
     Los marcadores del dataset incluyen la prórroga. Los partidos que
     acabaron en penaltis (shootouts.csv) duraron seguro 120'; el resto se
-    asume 90' (las prórrogas decididas sin penaltis no son identificables,
-    sesgo residual pequeño). El modelo entrena con offset log(minutos/90)
-    y por tanto predice λ por 90 minutos.
+    asume 90' (las prórrogas decididas sin penaltis no son identificables).
+    NOTA: la corrección de exposición (base_margin=log(minutos/90) y target
+    escalado) se probó y EMPEORÓ el holdout WC22, así que el modelo entrena
+    con los goles tal cual; `minutes` queda como columna de diagnóstico.
     """
     shoot = pd.read_csv(RAW / "shootouts.csv", parse_dates=["date"])
     keys = set(zip(shoot["date"].dt.strftime("%Y-%m-%d"),
