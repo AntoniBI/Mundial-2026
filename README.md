@@ -225,3 +225,16 @@ movimientos en probabilidad de título respecto a la predicción pre-torneo.
   (Poisson correcta; binomial negativa iría en dirección equivocada),
   clip de λ nunca activo, ensemble XGB+GLM probado y descartado (peor en
   las 4 ventanas), calibración global +0.01 goles.
+- **Jitter de fuerza por simulación (jun-2026, probado y descartado)**:
+  perturbar el Elo de cada equipo en cada simulación (~N(0, σ), constante
+  durante el torneo simulado, convertido a multiplicador de λ vía la
+  pendiente empírica d·log λ/d·elo_diff ≈ 0.002) para propagar la
+  incertidumbre del modelo y engordar las colas. Banco a nivel torneo
+  sobre los Mundiales 2014/18/22 (mismo cuadro de 32; log-loss binario de
+  alcanzar cada fase + log-loss del campeón, 10.000 sims): la mejora
+  aparente con una semilla (σ=40: ll_stages −0.002) desaparece al
+  promediar 4 semillas (−0.0002, dentro del ruido MC) y es inconsistente
+  entre torneos (WC18 empeora con todo σ; el campeón de WC22 empeora
+  claramente con σ=80). Conclusión: las probabilidades de torneo NO están
+  sobreconfiadas — la varianza Poisson + el formato ya generan colas
+  suficientes — así que el jitter no entra en producción.
