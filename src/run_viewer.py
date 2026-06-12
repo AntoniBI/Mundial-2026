@@ -315,6 +315,46 @@ def scoreboard_payload(log: pd.DataFrame, names: dict) -> dict | None:
             "best": fmt(best), "worst": fmt(worst)}
 
 
+def predictions_payload(log: pd.DataFrame, groups) -> list[dict]:
+    """Pronóstico vs resultado, partido a partido: para cada partido se
+    toma la ÚLTIMA predicción registrada antes de jugarse (out-of-sample,
+    igual que el marcador) y, si ya se jugó, el resultado real."""
+    if log.empty:
+        return []
+    df = pd.read_csv(RAW / "results.csv", parse_dates=["date"])
+    wc = df[(df["tournament"] == "FIFA World Cup") & (df["date"] >= WC26_START)]
+    teams = {t for ts in groups.values() for t in ts}
+    out = []
+    for _, r in wc.iterrows():
+        t1, t2 = r["home_team"], r["away_team"]
+        if t1 not in teams or t2 not in teams:
+            continue
+        md = r["date"].strftime("%Y-%m-%d")
+        cand = log[(log["t1"] == t1) & (log["t2"] == t2)
+                   & (log["match_date"] == md) & (log["gen_date"] <= md)]
+        if cand.empty:
+            continue
+        pr = cand.sort_values("gen_date").iloc[-1]
+        probs = np.array([pr["p1"], pr["px"], pr["p2"]], dtype=float)
+        played = pd.notna(r["home_score"])
+        row = {
+            "date": md, "date_str": r["date"].strftime("%d %b"),
+            "t1": t1, "t2": t2,
+            "p1": round(100 * probs[0], 1), "px": round(100 * probs[1], 1),
+            "p2": round(100 * probs[2], 1),
+            "pred": int(probs.argmax()),
+            "played": bool(played),
+        }
+        if played:
+            g1, g2 = int(r["home_score"]), int(r["away_score"])
+            oc = 0 if g1 > g2 else (1 if g1 == g2 else 2)
+            row.update({"score": f"{g1}-{g2}",
+                        "hit": bool(probs.argmax() == oc)})
+        out.append(row)
+    out.sort(key=lambda x: x["date"])
+    return out
+
+
 def trends_payload(groups) -> dict:
     """Evolución diaria de la probabilidad de campeón (CSV fechados)."""
     entries = []
@@ -457,6 +497,7 @@ def main():
         "today": today_matches(lam_tab, lam_late, groups, rho, today),
         "today_date": today,
         "scoreboard": scoreboard_payload(log, NAMES_ES),
+        "predictions": predictions_payload(log, groups),
         "trends": trends_payload(groups),
         "profiles": profiles_payload(snaps, table, collect, groups),
         "generated": date.today().isoformat(),

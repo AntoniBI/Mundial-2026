@@ -262,6 +262,15 @@
   .panel-title { font-size: 15px; font-weight: 800; color: var(--navy);
                  margin-bottom: 6px; }
   #trends-chart svg { width: 100%; height: auto; }
+
+  /* ---------- pronóstico vs resultado ---------- */
+  #pred-card { margin-bottom: 20px; }
+  .predt th.l, .predt td.l { text-align: left; }
+  .predt th.c, .predt td.c { text-align: center; }
+  .predt td.pk { font-weight: 800; color: var(--navy);
+                 background: rgba(31,111,174,.09); }
+  .predt .ok { color: var(--win); font-weight: 900; font-size: 14px; }
+  .predt .ko { color: var(--loss); font-weight: 900; font-size: 14px; }
   #trends-legend { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-top: 10px; }
   .tl-item { display: flex; align-items: center; gap: 7px; font-size: 12.5px;
              color: var(--text); font-weight: 600; }
@@ -423,6 +432,16 @@
 
 <section id="sec-trends">
   <div class="sb-grid" id="scoreboard"></div>
+  <div class="stages-card" id="pred-card">
+    <h3 class="panel-title">Pronóstico vs resultado, partido a partido</h3>
+    <p class="note">Para cada partido se muestra la <strong>última predicción
+    registrada antes de jugarse</strong>: probabilidad de victoria del primer
+    equipo (1), empate (X) y victoria del segundo (2). En azul, lo que el
+    modelo consideraba más probable. Cuando el partido termina aparece el
+    marcador real y si el pronóstico acertó (✓) o falló (✗). En eliminatorias
+    el pronóstico se refiere al resultado a 90 minutos.</p>
+    <div id="pred-tables"></div>
+  </div>
   <div class="stages-card">
     <h3 class="panel-title">Evolución de la probabilidad de campeón</h3>
     <p class="note">Cada punto es una ejecución diaria del modelo durante el
@@ -640,6 +659,44 @@ setTimeout(drawConnectors, 50);
       <div class="sb-card"><div class="k">Brier (menor=mejor)</div><div class="v">${sb.brier}</div></div>
       <div class="sb-card"><div class="k">Mejor pronóstico</div><div class="v small">${sb.best}</div></div>
       <div class="sb-card"><div class="k">Mayor sorpresa</div><div class="v small">${sb.worst}</div></div>`;
+  }
+}
+
+/* ---------- pronóstico vs resultado por partido ---------- */
+{
+  const list = DATA.predictions || [];
+  if (!list.length) {
+    document.getElementById("pred-card").style.display = "none";
+  } else {
+    const row = m => {
+      const cell = (v, i) =>
+        `<td class="c ${m.pred === i ? "pk" : ""}">${v.toFixed(1)}%</td>`;
+      const pt = m.pred === 0 ? m.t1 : m.pred === 2 ? m.t2 : null;
+      const predTxt = pt ? `${flag(pt, "flag sm")} ${N(pt)}` : "Empate";
+      const tick = !m.played ? ""
+        : m.hit ? `<span class="ok" title="Pronóstico acertado">✓</span>`
+                : `<span class="ko" title="Pronóstico fallado">✗</span>`;
+      return `<tr>
+        <td style="white-space:nowrap">${m.date_str}</td>
+        <td class="l" style="white-space:nowrap"><span data-team="${m.t1}">${flag(m.t1, "flag sm")} ${N(m.t1)}</span> · <span data-team="${m.t2}">${N(m.t2)} ${flag(m.t2, "flag sm")}</span></td>
+        ${cell(m.p1, 0)}${cell(m.px, 1)}${cell(m.p2, 2)}
+        <td class="l" style="white-space:nowrap">${predTxt}</td>
+        <td class="c">${m.played ? `<b>${m.score}</b>` : "—"}</td>
+        <td class="c">${tick}</td></tr>`;
+    };
+    const head = `<tr><th class="l">Fecha</th><th class="l">Partido</th>
+      <th class="c">1</th><th class="c">X</th><th class="c">2</th>
+      <th class="l">Pronóstico</th><th class="c">Resultado</th><th></th></tr>`;
+    const played = list.filter(m => m.played).reverse();  // recientes arriba
+    const next = list.filter(m => !m.played);
+    let html = "";
+    if (played.length) html +=
+      `<div class="mp-sec">Ya jugados · ${played.length}</div>
+       <table class="predt">${head}${played.map(row).join("")}</table>`;
+    if (next.length) html +=
+      `<div class="mp-sec" style="margin-top:18px">Próximos partidos · ${next.length}</div>
+       <table class="predt">${head}${next.map(row).join("")}</table>`;
+    document.getElementById("pred-tables").innerHTML = html;
   }
 }
 
