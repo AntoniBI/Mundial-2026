@@ -23,7 +23,7 @@ import pandas as pd
 from scipy.stats import poisson
 
 from src.config import (N_SIMULATIONS, OUTPUTS, PROCESSED, RAW, ROOT,
-                        WC26_START)
+                        WC26_HOSTS_FROM_QF, WC26_HOSTS_THROUGH_R16, WC26_START)
 from src.model.train import fit_rho, load_long, outcome_probs, score_grid, train
 from src.run_predict import load_groups
 from src.run_update import load_tournament_state
@@ -111,7 +111,118 @@ def modal_score(l1: float, l2: float, rho: float = 0.0) -> str:
     return f"{i}-{j}"
 
 
-def fixtures_payload(lam_tab, groups, played_group, rho=0.0) -> list[dict]:
+def world_ranking() -> pd.Series:
+    """Ranking mundial (1 = mejor) según el Elo propio de ~240 selecciones."""
+    elo = pd.read_csv(PROCESSED / "elo_final.csv", index_col="team")["elo"]
+    return elo.rank(ascending=False).astype(int)
+
+
+def _flag_img(team: str, cls: str = "flag sm") -> str:
+    c = FLAGS.get(team)
+    return (f'<img class="{cls}" src="https://flagcdn.com/w40/{c}.png" alt="">'
+            if c else "")
+
+
+def match_explanation(t1: str, t2: str, p1: float, px, p2: float,
+                      snaps: pd.DataFrame, world_rank: pd.Series,
+                      host1: bool = False, host2: bool = False,
+                      ko: bool = False) -> str:
+    """HTML que explica, en lenguaje sencillo, de dónde salen las
+    probabilidades de un partido: fuerza Elo, forma reciente (xG), valor de
+    plantilla y localía — los mismos datos que alimentan el modelo.
+
+    En grupos `p1/px/p2` son victoria/empate/derrota del primer equipo; en
+    eliminatoria (`ko=True`) `p1/p2` son la probabilidad de PASAR el cruce
+    (prórroga y penaltis incluidos) y `px` se ignora."""
+    s1, s2 = snaps.loc[t1], snaps.loc[t2]
+    n1, n2 = NAMES_ES.get(t1, t1), NAMES_ES.get(t2, t2)
+    elo1, elo2 = float(s1["elo"]), float(s2["elo"])
+    r1, r2 = int(world_rank.get(t1, 0)), int(world_rank.get(t2, 0))
+    diff = elo1 - elo2
+    strongn = n1 if diff >= 0 else n2
+    exp = 1.0 / (1.0 + 10 ** (-abs(diff) / 400.0))
+    rk = lambda r: f"la nº {r} del mundo" if r else "sin ranking"
+
+    facts = []
+    # --- Fuerza (Elo) ---
+    if abs(diff) < 30:
+        fuerza = (f"{n1} ({rk(r1)}, Elo {elo1:.0f}) y {n2} ({rk(r2)}, Elo "
+                  f"{elo2:.0f}) están prácticamente igualadas en fuerza, "
+                  f"así que ninguna parte como clara favorita.")
+    else:
+        fuerza = (f"{n1} es {rk(r1)} (Elo {elo1:.0f}) y {n2} {rk(r2)} (Elo "
+                  f"{elo2:.0f}). Esa diferencia de {abs(diff):.0f} puntos hace "
+                  f"que, en igualdad de condiciones, {strongn} se imponga unas "
+                  f"{round(exp * 10)} de cada 10 veces. Es el factor que más "
+                  f"pesa en el modelo.")
+    facts.append(("Fuerza (ranking Elo)", fuerza))
+
+    # --- Forma reciente (xG) ---
+    net1 = float(s1["form_xgf"]) - float(s1["form_xga"])
+    net2 = float(s2["form_xgf"]) - float(s2["form_xga"])
+    formn = n1 if net1 >= net2 else n2
+    forma = (f"Por su juego reciente, {n1} genera {float(s1['form_xgf']):.1f} "
+             f"goles esperados por partido y encaja {float(s1['form_xga']):.1f}; "
+             f"{n2}, {float(s2['form_xgf']):.1f} y {float(s2['form_xga']):.1f}. "
+             f"El balance reciente favorece a {formn}.")
+    facts.append(("Forma reciente (xG)", forma))
+
+    # --- Valor de plantilla ---
+    mv1, mv2 = s1["mv"], s2["mv"]
+    if pd.notna(mv1) and pd.notna(mv2) and mv1 > 0 and mv2 > 0:
+        richn = n1 if mv1 >= mv2 else n2
+        ratio = max(mv1, mv2) / min(mv1, mv2)
+        comp = (f"la de {richn} es unas {ratio:.1f} veces más cara"
+                if ratio >= 1.3 else "son de valor parecido")
+        facts.append(("Valor de plantilla",
+                      f"La plantilla de {n1} está tasada en {mv1:.0f} M€ y la de "
+                      f"{n2} en {mv2:.0f} M€ — {comp}. Más valor suele reflejar "
+                      f"más calidad individual."))
+
+    # --- Localía ---
+    if host1 and not host2:
+        facts.append(("Localía", f"{n1} juega como anfitriona en su país: el "
+                      "apoyo del público y no viajar le dan una ventaja extra."))
+    elif host2 and not host1:
+        facts.append(("Localía", f"{n2} juega como anfitriona en su país: el "
+                      "apoyo del público y no viajar le dan una ventaja extra."))
+
+    # --- Barra y conclusión ---
+    if ko:
+        bar = (f'<div class="why-bar"><div class="w" style="width:{p1}%"></div>'
+               f'<div class="l" style="width:{p2}%"></div></div>'
+               f'<div class="why-leg"><span>{_flag_img(t1)} {n1} pasa <b>{p1}%</b></span>'
+               f'<span><b>{p2}%</b> pasa {n2} {_flag_img(t2)}</span></div>')
+        concl = (f"En resumen, el modelo da un <b>{p1}%</b> a que {n1} avance y un "
+                 f"<b>{p2}%</b> a {n2}. En eliminatoria no hay empate: si acaban "
+                 f"iguales a los 90', deciden la prórroga y, en su caso, los "
+                 f"penaltis (donde la favorita por Elo tiene una ligera ventaja).")
+    else:
+        bar = (f'<div class="why-bar"><div class="w" style="width:{p1}%"></div>'
+               f'<div class="d" style="width:{px}%"></div>'
+               f'<div class="l" style="width:{p2}%"></div></div>'
+               f'<div class="why-leg"><span>{_flag_img(t1)} {n1} <b>{p1}%</b></span>'
+               f'<span>Empate <b>{px}%</b></span>'
+               f'<span><b>{p2}%</b> {n2} {_flag_img(t2)}</span></div>')
+        concl = (f"En resumen, el modelo da un <b>{p1}%</b> a la victoria de {n1}, "
+                 f"un <b>{px}%</b> al empate y un <b>{p2}%</b> a la de {n2}. El "
+                 f"empate y la opción de la menos favorita recogen el azar de un "
+                 f"solo partido: una expulsión, un penalti o una buena tarde del "
+                 f"portero pueden cambiarlo todo.")
+
+    head = (f'<div class="mp-head">{_flag_img(t1, "flag")}'
+            f'<div><h2 style="font-size:17px">{n1} '
+            f'<span style="color:var(--dim);font-weight:600">vs</span> {n2}</h2>'
+            f'<div class="grp">¿De dónde salen estas probabilidades?</div></div>'
+            f'{_flag_img(t2, "flag")}</div>')
+    flist = "".join(f'<div class="why-f"><span class="why-k">{k}</span>{v}</div>'
+                    for k, v in facts)
+    return (f'{head}{bar}<div class="mp-sec">Factores que mueven el pronóstico'
+            f'</div>{flist}<div class="why-concl">{concl}</div>')
+
+
+def fixtures_payload(lam_tab, groups, played_group, snaps, world_rank,
+                     rho=0.0) -> list[dict]:
     """Los 72 partidos reales de grupos con sus probabilidades 1X2."""
     df = pd.read_csv(RAW / "results.csv", parse_dates=["date"])
     wc = df[(df["tournament"] == "FIFA World Cup") & (df["date"] >= WC26_START)]
@@ -124,14 +235,19 @@ def fixtures_payload(lam_tab, groups, played_group, rho=0.0) -> list[dict]:
         l1, l2 = lam_tab[(t1, t2)], lam_tab[(t2, t1)]
         p = outcome_probs(np.array([l1]), np.array([l2]), rho=rho)[0]
         played = (t1, t2) in played_group
+        p1, px, p2 = (round(100 * p[0], 1), round(100 * p[1], 1),
+                      round(100 * p[2], 1))
         out.append({
             "group": group_of[t1], "date": r["date"].strftime("%d %b"),
             "t1": t1, "t2": t2,
-            "p1": round(100 * p[0], 1), "px": round(100 * p[1], 1),
-            "p2": round(100 * p[2], 1),
+            "p1": p1, "px": px, "p2": p2,
             "score": (f"{int(r['home_score'])}-{int(r['away_score'])}"
                       if played else modal_score(l1, l2, rho)),
             "played": played,
+            "why": match_explanation(
+                t1, t2, p1, px, p2, snaps, world_rank,
+                host1=t1 in WC26_HOSTS_THROUGH_R16 and t2 not in WC26_HOSTS_THROUGH_R16,
+                host2=t2 in WC26_HOSTS_THROUGH_R16 and t1 not in WC26_HOSTS_THROUGH_R16),
         })
     return out
 
@@ -258,12 +374,13 @@ def update_prediction_log(lam_tab, lam_late, groups, rho, today: str) -> pd.Data
         if t1 not in teams or t2 not in teams:
             continue
         lam = lam_late if r["date"].strftime("%Y-%m-%d") >= QF_FROM else lam_tab
-        p = outcome_probs(np.array([lam[(t1, t2)]]), np.array([lam[(t2, t1)]]),
-                          rho=rho)[0]
+        l1, l2 = lam[(t1, t2)], lam[(t2, t1)]
+        p = outcome_probs(np.array([l1]), np.array([l2]), rho=rho)[0]
         rows.append({"gen_date": today, "match_date": r["date"].strftime("%Y-%m-%d"),
                      "t1": t1, "t2": t2,
                      "p1": round(p[0], 4), "px": round(p[1], 4),
-                     "p2": round(p[2], 4)})
+                     "p2": round(p[2], 4),
+                     "gpred": modal_score(l1, l2, rho)})
     log_path = OUTPUTS / "match_predictions_log.csv"
     log = pd.DataFrame(rows)
     if log_path.exists():
@@ -297,11 +414,15 @@ def scoreboard_payload(log: pd.DataFrame, names: dict) -> dict | None:
         oc = 0 if g1 > g2 else (1 if g1 == g2 else 2)
         probs = np.array([pr["p1"], pr["px"], pr["p2"]])
         y = np.zeros(3); y[oc] = 1
+        gp = pr["gpred"] if "gpred" in pr else None
+        real = f"{g1}-{g2}"
         rows.append({"t1": r["home_team"], "t2": r["away_team"],
-                     "score": f"{g1}-{g2}",
+                     "score": real,
                      "p_real": float(probs[oc]),
                      "hit": bool(probs.argmax() == oc),
-                     "brier": float(np.sum((probs - y) ** 2))})
+                     "brier": float(np.sum((probs - y) ** 2)),
+                     "gpred": gp if pd.notna(gp) else None,
+                     "exact": bool(pd.notna(gp) and gp == real)})
     if not rows:
         return None
     d = pd.DataFrame(rows)
@@ -309,10 +430,14 @@ def scoreboard_payload(log: pd.DataFrame, names: dict) -> dict | None:
     worst = d.loc[d["p_real"].idxmin()]
     fmt = lambda x: (f"{names.get(x['t1'], x['t1'])} {x['score']} "
                      f"{names.get(x['t2'], x['t2'])} ({100 * x['p_real']:.0f}%)")
-    return {"n": len(d), "acc": round(100 * d["hit"].mean(), 1),
-            "brier": round(d["brier"].mean(), 3),
-            "logloss": round(float(-np.mean(np.log(np.clip(d["p_real"], 1e-9, 1)))), 3),
-            "best": fmt(best), "worst": fmt(worst)}
+    exact = d[d["gpred"].notna()]
+    out = {"n": len(d), "acc": round(100 * d["hit"].mean(), 1),
+           "brier": round(d["brier"].mean(), 3),
+           "logloss": round(float(-np.mean(np.log(np.clip(d["p_real"], 1e-9, 1)))), 3),
+           "best": fmt(best), "worst": fmt(worst),
+           "exact_n": int(len(exact)),
+           "exact_acc": round(100 * exact["exact"].mean(), 1) if len(exact) else None}
+    return out
 
 
 def predictions_payload(log: pd.DataFrame, groups) -> list[dict]:
@@ -337,19 +462,23 @@ def predictions_payload(log: pd.DataFrame, groups) -> list[dict]:
         pr = cand.sort_values("gen_date").iloc[-1]
         probs = np.array([pr["p1"], pr["px"], pr["p2"]], dtype=float)
         played = pd.notna(r["home_score"])
+        gp = pr["gpred"] if "gpred" in pr else None
+        gp = gp if pd.notna(gp) else None
         row = {
             "date": md, "date_str": r["date"].strftime("%d %b"),
             "t1": t1, "t2": t2,
             "p1": round(100 * probs[0], 1), "px": round(100 * probs[1], 1),
             "p2": round(100 * probs[2], 1),
             "pred": int(probs.argmax()),
+            "pred_score": gp,
             "played": bool(played),
         }
         if played:
             g1, g2 = int(r["home_score"]), int(r["away_score"])
             oc = 0 if g1 > g2 else (1 if g1 == g2 else 2)
             row.update({"score": f"{g1}-{g2}",
-                        "hit": bool(probs.argmax() == oc)})
+                        "hit": bool(probs.argmax() == oc),
+                        "exact_hit": bool(gp is not None and gp == f"{g1}-{g2}")})
         out.append(row)
     out.sort(key=lambda x: x["date"])
     return out
@@ -409,7 +538,8 @@ def profiles_payload(snaps, table, collect, groups) -> dict:
     return out
 
 
-def ko_payload(collect, lam_tab, lam_late, r32_pairs, pen_tab=None, rho=0.0) -> dict:
+def ko_payload(collect, lam_tab, lam_late, r32_pairs, snaps, world_rank,
+               pen_tab=None, rho=0.0) -> dict:
     """Cuadro COHERENTE por propagación.
 
     - R32: emparejamiento más frecuente de cada cruce en las simulaciones.
@@ -453,13 +583,19 @@ def ko_payload(collect, lam_tab, lam_late, r32_pairs, pen_tab=None, rho=0.0) -> 
             grid = score_grid(np.array([lam[(t1, t2)]]),
                               np.array([lam[(t2, t1)]]), rho)[0][:9, :9]
             gi, gj = np.unravel_index(grid.argmax(), grid.shape)
+            w1r, w2r = round(100 * w1, 1), round(100 * (1 - w1), 1)
+            hosts = WC26_HOSTS_FROM_QF if rnd in LATE_ROUNDS else WC26_HOSTS_THROUGH_R16
             rows.append({
                 "t1": t1, "t2": t2,
                 "pair_pct": round(100 * freq / n, 1),
-                "w1": round(100 * w1, 1),
-                "w2": round(100 * (1 - w1), 1),
+                "w1": w1r,
+                "w2": w2r,
                 "score": f"{gi}-{gj}" + ("+" if gi == gj else ""),
                 "score_pct": round(100 * float(grid[gi, gj])),
+                "why": match_explanation(
+                    t1, t2, w1r, None, w2r, snaps, world_rank, ko=True,
+                    host1=t1 in hosts and t2 not in hosts,
+                    host2=t2 in hosts and t1 not in hosts),
             })
         out[rnd] = rows
     return out
@@ -490,6 +626,7 @@ def main():
                           played_group=played_group, ko_winners=ko_winners,
                           collect=collect)
     order_map, r32_pairs = coherent_groups(collect, groups)
+    world_rank = world_ranking()
 
     log = update_prediction_log(lam_tab, lam_late, groups, rho, today)
 
@@ -514,8 +651,10 @@ def main():
             } for t in order_map[g]]
             for g in groups
         },
-        "fixtures": fixtures_payload(lam_tab, groups, played_group, rho=rho),
-        "ko": ko_payload(collect, lam_tab, lam_late, r32_pairs, pen_tab=pen_tab, rho=rho),
+        "fixtures": fixtures_payload(lam_tab, groups, played_group, snaps,
+                                     world_rank, rho=rho),
+        "ko": ko_payload(collect, lam_tab, lam_late, r32_pairs, snaps,
+                         world_rank, pen_tab=pen_tab, rho=rho),
         "ko_labels": R32_LABELS,
         "feeds": FEEDS,
         "stages": [{"team": t, **{k: float(v) for k, v in row.items()}}

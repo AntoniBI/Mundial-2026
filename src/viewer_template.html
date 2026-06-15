@@ -313,6 +313,36 @@
                    z-index: 30; box-shadow: 0 4px 14px rgba(20,33,61,.3); }
   .info-btn .tip b { color: #fff; }
   .info-btn:hover .tip, .info-btn:focus .tip { opacity: 1; }
+
+  /* ---------- icono "por qué" en cada partido + su pop-up ---------- */
+  .why-btn { display: inline-flex; align-items: center; justify-content: center;
+             width: 17px; height: 17px; border-radius: 50%; padding: 0;
+             border: 1px solid var(--lightblue); background: #fff;
+             color: var(--lightblue); font: 800 10px/1 inherit; cursor: pointer;
+             flex: 0 0 auto; transition: background .12s, color .12s; }
+  .why-btn:hover { background: var(--lightblue); color: #fff; }
+  .match .why-btn { width: 15px; height: 15px; font-size: 9px; }
+  .why-bar { display: flex; height: 12px; border-radius: 6px; overflow: hidden;
+             background: var(--card2); margin: 6px 0 6px; }
+  .why-bar .w { background: var(--win); } .why-bar .d { background: var(--draw); }
+  .why-bar .l { background: var(--loss); }
+  .why-leg { display: flex; justify-content: space-between; gap: 8px;
+             font-size: 12px; color: var(--dim); margin-bottom: 4px; }
+  .why-leg b { color: var(--navy); }
+  .why-leg img { vertical-align: -2px; }
+  .why-f { font-size: 12.5px; line-height: 1.5; color: var(--text);
+           padding: 8px 0; border-top: 1px solid var(--line); }
+  .why-f .why-k { display: block; font-weight: 800; color: var(--lightblue);
+                  font-size: 11px; text-transform: uppercase; letter-spacing: .5px;
+                  margin-bottom: 2px; }
+  .why-concl { margin-top: 12px; font-size: 12.5px; line-height: 1.55;
+               color: var(--text); background: var(--card2); border-radius: 12px;
+               padding: 11px 13px; }
+  .why-concl b { color: var(--navy); }
+  /* marcador exacto acertado en la tabla pronóstico vs resultado */
+  .predt .exact-ok { color: var(--win); font-weight: 800;
+                     background: rgba(11,157,78,.12); border-radius: 5px;
+                     padding: 1px 5px; }
   .mp-sec { font-size: 11px; font-weight: 800; letter-spacing: 1.5px;
             text-transform: uppercase; color: var(--lightblue); margin: 14px 0 8px; }
   .mp-bar { display: grid; grid-template-columns: 86px 1fr 52px; gap: 8px;
@@ -439,7 +469,11 @@
     equipo (1), empate (X) y victoria del segundo (2). En azul, lo que el
     modelo consideraba más probable. Cuando el partido termina aparece el
     marcador real y si el pronóstico acertó (✓) o falló (✗). En eliminatorias
-    el pronóstico se refiere al resultado a 90 minutos.</p>
+    el pronóstico se refiere al resultado a 90 minutos.<br>
+    La columna <strong>Previsto</strong> es el marcador exacto más probable
+    según el modelo (también registrado antes del partido); se resalta en
+    <span style="color:var(--win);font-weight:700">verde</span> cuando coincide
+    clavado con el resultado real.</p>
     <div id="pred-tables"></div>
   </div>
   <div class="stages-card">
@@ -486,6 +520,11 @@ const flag = (t, cls = "flag") => {
 };
 const N = t => DATA.names[t] || t;  // nombre en español para la UI
 
+// Explicaciones "¿por qué estas probabilidades?" indexadas por id de partido
+const WHY = {};
+DATA.fixtures.forEach((f, i) => { f.wid = "fx" + i; WHY[f.wid] = f.why; });
+for (const k in DATA.ko) DATA.ko[k].forEach((m, i) => { m.wid = k + i; WHY[m.wid] = m.why; });
+
 const showTab = (t) => {
   document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
   document.querySelectorAll("section").forEach(x => x.classList.remove("visible"));
@@ -519,7 +558,7 @@ for (const [letter, teams] of Object.entries(DATA.groups)) {
     <div class="fxrow">
       <div class="t1">${N(f.t1)} ${flag(f.t1, "flag sm")}</div>
       <div class="fxmid ${f.played ? "played" : ""}">${f.score}</div>
-      <div class="t2">${flag(f.t2, "flag sm")} ${N(f.t2)}</div>
+      <div class="t2">${flag(f.t2, "flag sm")} ${N(f.t2)} <button class="why-btn" data-why="${f.wid}" title="¿Por qué estas probabilidades?" aria-label="¿Por qué estas probabilidades?">i</button></div>
       <div class="pcts"><span>${f.p1}%</span><span>X ${f.px}%</span><span>${f.p2}%</span></div>
       <div class="bar"><div class="w" style="width:${f.p1}%"></div><div class="d" style="width:${f.px}%"></div><div class="l" style="width:${f.p2}%"></div></div>
     </div>`).join("");
@@ -541,7 +580,7 @@ const matchCard = (key, i, extra = "") => {
             : key === "Final" ? "FINAL"
             : key === "Third" ? "3ER PUESTO" : `${key} ${i + 1}`;
   return `<div class="match ${extra}" id="m-${key}-${i}">
-    <div class="lbl"><span>${lbl}</span><span class="kscore">${m.score || ""}${m.score_pct ? ` <em>·${m.score_pct}%</em>` : ""}</span><span>${m.pair_pct}%</span></div>
+    <div class="lbl"><span>${lbl} <button class="why-btn" data-why="${m.wid}" title="¿Por qué estas probabilidades?" aria-label="¿Por qué estas probabilidades?">i</button></span><span class="kscore">${m.score || ""}${m.score_pct ? ` <em>·${m.score_pct}%</em>` : ""}</span><span>${m.pair_pct}%</span></div>
     <div class="mrow ${fav1 ? "fav" : ""}">${flag(m.t1, "flag sm")}<span class="name">${N(m.t1)}</span><span class="pct">${m.w1}%</span></div>
     <div class="mrow ${!fav1 ? "fav" : ""}">${flag(m.t2, "flag sm")}<span class="name">${N(m.t2)}</span><span class="pct">${m.w2}%</span></div>
     <div class="winbar"><div class="a" style="width:${m.w1}%"></div><div class="b" style="width:${m.w2}%"></div></div>
@@ -656,6 +695,7 @@ setTimeout(drawConnectors, 50);
     el.innerHTML = `
       <div class="sb-card"><div class="k">Partidos evaluados</div><div class="v">${sb.n}</div></div>
       <div class="sb-card"><div class="k">Aciertos 1X2</div><div class="v">${sb.acc}%</div></div>
+      ${sb.exact_acc != null ? `<div class="sb-card"><div class="k">Aciertos marcador exacto</div><div class="v">${sb.exact_acc}%</div></div>` : ""}
       <div class="sb-card"><div class="k">Brier (menor=mejor)</div><div class="v">${sb.brier}</div></div>
       <div class="sb-card"><div class="k">Mejor pronóstico</div><div class="v small">${sb.best}</div></div>
       <div class="sb-card"><div class="k">Mayor sorpresa</div><div class="v small">${sb.worst}</div></div>`;
@@ -681,12 +721,13 @@ setTimeout(drawConnectors, 50);
         <td class="l" style="white-space:nowrap"><span data-team="${m.t1}">${flag(m.t1, "flag sm")} ${N(m.t1)}</span> · <span data-team="${m.t2}">${N(m.t2)} ${flag(m.t2, "flag sm")}</span></td>
         ${cell(m.p1, 0)}${cell(m.px, 1)}${cell(m.p2, 2)}
         <td class="l" style="white-space:nowrap">${predTxt}</td>
+        <td class="c">${m.pred_score ? (m.played && m.exact_hit ? `<span class="exact-ok">${m.pred_score}</span>` : m.pred_score) : "—"}</td>
         <td class="c">${m.played ? `<b>${m.score}</b>` : "—"}</td>
         <td class="c">${tick}</td></tr>`;
     };
     const head = `<tr><th class="l">Fecha</th><th class="l">Partido</th>
       <th class="c">1</th><th class="c">X</th><th class="c">2</th>
-      <th class="l">Pronóstico</th><th class="c">Resultado</th><th></th></tr>`;
+      <th class="l">Pronóstico</th><th class="c">Previsto</th><th class="c">Resultado</th><th></th></tr>`;
     const played = list.filter(m => m.played).reverse();  // recientes arriba
     const next = list.filter(m => !m.played);
     let html = "";
@@ -785,7 +826,14 @@ function openProfile(team) {
     <div class="mp-sec">Rivales más probables</div>${rivals}`;
   document.getElementById("modal").classList.remove("hidden");
 }
+function openWhy(html) {
+  if (!html) return;
+  document.getElementById("modal-body").innerHTML = html;
+  document.getElementById("modal").classList.remove("hidden");
+}
 document.addEventListener("click", e => {
+  const w = e.target.closest("[data-why]");
+  if (w) { openWhy(WHY[w.dataset.why]); return; }
   const t = e.target.closest("[data-team]");
   if (t) openProfile(t.dataset.team);
   if (e.target.id === "modal") e.target.classList.add("hidden");
